@@ -1,0 +1,24 @@
+/* Helper Class  */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+nav img {
+  float: left;
+  position: fixed; }
+nav ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px auto;
+  float: left; }
+nav li {
+  list-style: none;
+  display: inline-block;
+  padding: 0px 5px; }
+nav a {
+  border: 1px solid #000;
+  text-decoration: none;
+  cursor: pointer; }
