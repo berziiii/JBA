@@ -133,7 +133,7 @@
 								</ul>
 							</div>
 							<div class="col-lg-2 col-md-2 col-sm-2 bot-nav-link">
-								<a>TERMS &amp; CONDITIONS</a>
+								<a id="openTermsContent">TERMS &amp; CONDITIONS</a>
 							</div>											
 						</div>												
 					</div>
@@ -580,22 +580,30 @@
 									<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 										<div class="form-container">
 											<h3>Request an Appointment.</h3>
-											<form action="mailto:john@jbafinancialadvisors.com" method="post">
+											<form action="/forms/consultation"method="post">
 												<div class="input-title">
 													<h4>Name *</h4>
-													<input type="text" name="name" value="">
+													<label for="ConsultationFormName">
+													</label>
+													<input name="data[ConsultationForm][name]" type="text" id="ConsultationFormName">
 												</div>
 												<div class="input-title">
 													<h4>Email *</h4>
-													<input type="text" name="email" value="">
+													<label for="ConsultationFormEmailAddress">
+													</label>
+													<input name="data[ConsultationForm][email_address]" type="text" name="email" id="ConsultationFormEmailAddress">
 												</div>
 												<div class="input-title">
-													<h4>Phone</h4>
-													<input type="text" name="phone" value="">
+													<h4>Phone Number</h4>
+													<label for="ConsultationFormPhoneNumber">
+													</label>
+													<input name="data[ConsultationForm][phone_number]" type="text" id="ConsultationFormPhoneNumber">
 												</div>
 												<div class="input-title">
 													<h4>Investment Goals</h4>
-													<textarea type="text" name="description" value=""></textarea>
+													<label for="ConsultationFormGoals">
+													</label>
+													<textarea name="data[ConsultationForm][goals]" type="text" id="ConsultationFormGoals"></textarea>
 												</div>
 												<div class="submit">
 													<input type="submit" value="Submit">
@@ -621,6 +629,10 @@
 										<h5>Timonium, MD 21093</h5>
 									</div>
 									<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+										<a href="mailto:john@jbafinancialadvisors.com"><img src="images/email.png" alt="email"></a>
+										<h5>john@jbafinancialadvisors.com</h5>
+									</div>
+									<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
 										<img src="images/phone.png" alt="phone">
 										<h5> 410.584.1491</h5>
 									</div>
@@ -628,9 +640,20 @@
 										<img src="images/fax.png" alt="fax">
 										<h5> 410.584.1492</h5>
 									</div>
-									<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-										<a href="mailto:john@jbafinancialadvisors.com"><img src="images/email.png" alt="email"></a>
-										<h5>john@jbafinancialadvisors.com</h5>
+								</div>
+							</div>
+							<div class="social-wrapper">
+								<div class="social">
+									<div>
+										<a href="https://www.facebook.com/JBAFinancialAdvisors" target="_blank">
+											<img src="images/facebook.svg" alt="Facebook">
+										</a>
+										<a href="http://www.linkedin.com/pub/john-berzellini/50/b94/472" target="_blank">
+											<img src="images/linkedin.svg" alt="LinkedIn">
+										</a>
+										<a href="https://twitter.com/JBAFinancialAd" target="_blank">
+											<img src="images/twitter.svg" alt="twitter">
+										</a>
 									</div>
 								</div>
 							</div>
@@ -642,8 +665,6 @@
 				<div class="lightbox">
 				</div>
 				<div class="resume-content">
-					<div id="closeResumeContent" class="close-resume"><a>+</a>
-					</div>
 					<h2>John Berzellini, CFP®, CLU, CPA</h2>
 					<div class="row">
 						<div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4">
@@ -703,9 +724,6 @@
 				<div class="lightbox">
 				</div>
 				<div class="platform-content">
-					<div id="closePlatform" class="close-platform">
-						<a>+</a>
-					</div>
 					<h2>JBA Advisory Platform.</h2>
 					<h3 class="platorm-quote">"Big business security with small business service."</h3>
 					<section>
@@ -807,6 +825,11 @@
 						</p>
 					</section>										
 				</div>
+			</div>
+			<div id="termsContent" class="hidden">
+				<div class="lightbox">
+				</div>
+				<div class="terms-content">
 			</div>
 		</main>
 		<footer>

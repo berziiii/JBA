@@ -681,6 +681,7 @@ table
 	width: 100%
 	padding-bottom: 100px
 	font-size: 16pt
+	position: relative
 
 	.contact-wrapper
 		width: 100%
@@ -688,6 +689,7 @@ table
 		text-align: center
 		padding: 1.5em
 		border-radius: 5px
+		position: relative
 
 	.form-container
 		text-align: center
@@ -819,27 +821,6 @@ table
 	border: 2px solid $white
 	overflow-y: scroll
 
-	.close-resume, .close-platform, .close-terms
-		transform: rotate(45deg)
-		position: fixed
-		z-index: 1000000
-		right: 50%
-		margin-right: -350px
-		width: 50px
-		height: 50px
-		text-align: center
-		top: 4%
-		font-size: 2em
-
-		a
-			text-decoration: none
-			color: $white
-			cursor: pointer
-
-			&:hover
-				font-weight: 900
-				color: $light-black
-
 	h2
 		color: $dark-green
 		font-size: 1.8em
@@ -894,12 +875,27 @@ table
 		div
 			height: 90px
 
+.social-wrapper
+	position: absolute
+	bottom: 0%
+	right: 0%
+
+	.social
+		text-align: center
+
+		a
+			cursor: pointer
+
+		img
+			border-radius: 16px
+
+
 .lightbox
 	position: fixed
 	margin: 0px auto
 	top: 0px
 	width: 100%
-	opacity: .8
+	opacity: .9
 	background-color: $black
 	z-index: 10001
 	height: 1000px
@@ -915,8 +911,3 @@ table
 .economic-video
 	height: 570px
 	width: 960px
-
-
-
-
-

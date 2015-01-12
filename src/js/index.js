@@ -179,10 +179,6 @@ $('#openResumeContent').on('click', function () {
   $('#resumeContent').removeClass('hidden')
 });
 
-$('#closeResumeContent').on('click', function () {
-  $('#resumeContent').addClass('hidden')
-});
-
 $('.lightbox').on('click', function () {
   $('#resumeContent').addClass('hidden')
 });
@@ -193,10 +189,17 @@ $('#openPlatform').on('click', function () {
   $('#platformContent').removeClass('hidden')
 });
 
-$('#closePlatform').on('click', function () {
+$('.lightbox').on('click', function () {
   $('#platformContent').addClass('hidden')
 });
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*Terms Content Lightbox*/
+
+$('#openTermsContent').on('click', function () {
+  $('#termsContent').removeClass('hidden')
+});
+
 $('.lightbox').on('click', function () {
-  $('#platformContent').addClass('hidden')
+  $('#termsContent').addClass('hidden')
 });
