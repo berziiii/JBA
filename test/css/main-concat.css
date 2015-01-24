@@ -916,5 +916,26 @@ nav {
       .contact .social-wrapper img {
         width: 75px;
         padding-bottom: 15px; } }
+@media (max-width: 450px) {
+  nav .login-menu {
+    font-size: 6pt;
+    width: 250px; }
+    nav .login-menu .account-btn, nav .login-menu .financial-btn {
+      width: 125px; }
+  nav .company-logo {
+    width: 45px; }
+
+  .about .about-content ul {
+    font-size: 0.75em;
+    font-weight: 700;
+    margin-left: 0px; }
+
+  .contact .form-container input, .contact .form-container textarea {
+    width: 95%; }
+  .contact .form-container iframe {
+    width: 100%; }
+  .contact .form-container .submit input {
+    font-size: 1em;
+    width: 75%; } }
 
 /*# sourceMappingURL=main.css.map */
