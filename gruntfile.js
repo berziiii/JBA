@@ -73,7 +73,8 @@ module.exports = function(grunt) {
                     src: [
                         'assets/**',
                         'images/**',
-                        '*.csv'
+                        '*account-login/**',
+                        '*fonts'
                     ],
                     dest: 'dist'
                     }],

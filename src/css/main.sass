@@ -1,20 +1,20 @@
-/* Helper Class  */
+/* Helper Class
 html, body, ul, ol
-	margin: 0
-	padding: 0
+    margin: 0
+    padding: 0
 
 .clearfix:before, .clearfix:after
-	content: " " 
-	display: table
+    content: " "
+    display: table
 
 .clearfix:after
-	clear: both
+    clear: both
 
-*, *:after, *:before 
-	-webkit-box-sizing: border-box
-	-moz-box-sizing: border-box
-	-ms-box-sizing: border-box
-	box-sizing: border-box
+*, *:after, *:before
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    -ms-box-sizing: border-box
+    box-sizing: border-box
 
 $dark-green: #005d27
 
@@ -41,873 +41,918 @@ $off-black: #252525
 $light-black: #424242
 
 .center
-	text-align: center
+    text-align: center
 
 .hidden
-	display: none
+    display: none
 
 .open-subMenu
-	-webkit-transform: translateY(100%)
-	transform: translateY(100%)
-	-webkit-transition: 0.3s ease-out
-	transition: 0.3s ease-out
+    -webkit-transform: translateY(100%)
+    transform: translateY(100%)
+    -webkit-transition: 0.3s ease-out
+    transition: 0.3s ease-out
 
-/* Module Class */
-nav 
-	position: fixed
-	z-index: 9999
-	top: 0px
-	background-color: $white
-	font-size: 16pt
+/* Module Class
+.nav-container
+    width: 100%
 
-	.nav-bar
-		width: 100%
-		z-index: 9999
-		position: fixed
-		background-color: $white
-		height: 90px
-		font-family: 'Lato', sans-serif
-		font-weight: 500
-		font-size: .9em
-
-	.login-menu
-		position: fixed
-		z-index: 10000
-		right: 2%
-		display: inline-block
-		font-size: .5em
-		text-align: center
-		width: 300px
-
-		.login-account
-			&:hover
-				.account-login
-					top: 35px
-					-webkit-transition: 0.3s ease-out
-					transition: 0.3s ease-out
-
-		.account-btn, .financial-btn
-			z-index: 10000
-			width: 150px
-			float: left
-			background-color: $black
-			color: #fff
-			padding: 10px
-			border: 1px solid $white
-			border-radius: 5%
-
-			&:hover
-				cursor: pointer
-				background-color: $white
-				color: $black
-				border: 1px solid $black
-				text-decoration: none
-
-		.account-login
-			position: absolute
-			z-index: -1
-			width: 148px
-			top: -20px
-			margin-left: 1px
-			background-color: $white
-			font-weight: 500
-			font-size: 1.15em
-			-webkit-transition: 0.3s ease-out
-				transition: 0.3s ease-out
-
-			ul
-				margin-bottom: 0px
-				list-style: none
-
-			li
-				border: 1px solid $black
-				padding: 5px 10px 5px 10px
-
-		.account-subMenu
-			color: $black
-			cursor: pointer
-			text-decoration: none
-
-
-			.subMenu-link
-				text-decoration: none
-				color: $black
-				font-weight: 700
-				&:hover
-					border-bottom: 2px solid $lightest-green
-
-
-	.company-logo
-		float: left
-		position: fixed
-		z-index: 10000
-		margin: 2px 15px 0px 5%
-		padding: 5px
-		border: 2px solid $black
-		width: 85px
-
-		&:hover
-			cursor: pointer
-
-	.nav-menu
-		width: 100%
-		z-index: 9999
-		padding: 0px
-		position: fixed
-		left: 50%
-		margin-left: -50%
-		line-height: 125px
-		text-align: center
-		height: 80px
-
-		ul
-			list-style: none
-			line-height: 125px
-			padding: 0px
-
-		li
-			list-style: none
-			display: inline-block
-			padding: 0px .94em
-			font-size: 1em
-
-		a
-			text-decoration: none
-			cursor: pointer
-			color: #000
-			font-size: 1em
-			&:hover
-				border-bottom: .32em solid $lightest-green
-				color: #000
+nav
+    position: fixed
+    z-index: 9999
+    top: 0px
+    background-color: $white
+    font-size: 16pt
+    width: 100%
+    .nav-bar
+        width: 100%
+        z-index: 9999
+        position: fixed
+        background-color: $white
+        height: 90px
+        font-family: "Lato", sans-serif
+        font-weight: 500
+        font-size: 0.9em
+        margin-bottom: 0px
+    .login-menu
+        position: fixed
+        z-index: 10000
+        right: 0%
+        display: inline-block
+        font-size: 0.6em
+        text-align: center
+        width: 320px
+        .account-btn, .financial-btn
+            z-index: 10000
+            width: 160px
+            float: left
+            background-color: $black
+            color: #fff
+            padding: 10px
+            border: 1px solid $white
+            border-radius: 5%
+            &:hover
+                cursor: pointer
+                border: 1px solid $black
+                text-decoration: none
+    .company-logo
+        float: left
+        position: fixed
+        z-index: 10000
+        margin: 2px 15px 0px 5%
+        padding: 5px
+        border: 2px solid $black
+        width: 85px
+        &:hover
+            cursor: pointer
+    .nav-menu
+        width: 100%
+        z-index: 9999
+        padding: 0px
+        position: fixed
+        left: 50%
+        margin-left: -50%
+        line-height: 80px
+        text-align: center
+        height: 80px
+        margin-bottom: 0px
+        padding-top: 10px
+        ul
+            list-style: none
+            line-height: 125px
+            padding: 0px
+        li
+            list-style: none
+            display: inline-block
+            padding: 0px 0.94em
+            font-size: 1em
+        a
+            text-decoration: none
+            cursor: pointer
+            color: #000
+            font-size: 1em
+            &:hover
+                border-bottom: 0.32em solid $lightest-green
+                color: #000
 
 .bot-nav-bar
-	position: fixed
-	bottom: 0%
-	z-index: 10000
-	background-color: $white
-	opacity: .9
-	width: 100%
-	font-size: 16pt
-	height: 30px
-	margin-left: 15px
-	text-align: center
-
+    position: fixed
+    bottom: 0%
+    z-index: 10000
+    background-color: $white
+    opacity: 0.9
+    width: 100%
+    font-size: 16pt
+    height: 35px
+    margin-left: 15px
+    text-align: center
 
 .bot-nav-link
-	font-size: .66em
-	font-weight: 900
-	line-height: 30px
-	&:hover
-		.site-wrapper, .read-wrapper
-			margin-top: -600px
-			-webkit-transition: 0.4s ease-out
-			transition: 0.4s ease-out
-		.read-wrapper
-			margin-top: -700px
-
-	a
-		text-decoration: none
-		cursor: pointer
-		color: $black
-		opacity: 1
-		&:hover
-			color: $black
-			border-bottom: 5px solid $lightest-green
-			font-weight: 900
-			text-decoration: none
+    font-size: 0.66em
+    font-weight: 900
+    line-height: 35px
+    &:hover
+        .site-wrapper, .read-wrapper
+            margin-top: -600px
+            -webkit-transition: 0.4s ease-out
+            transition: 0.4s ease-out
+        .read-wrapper
+            margin-top: -725px
+    a
+        text-decoration: none
+        cursor: pointer
+        color: $black
+        opacity: 1
+        &:hover
+            color: $black
+            border-bottom: 5px solid $lightest-green
+            font-weight: 900
+            text-decoration: none
 
 .site-wrapper
-	height: 600px
-
-	li
-		list-style: none
-		padding: 1em .25em
+    height: 600px
+    li
+        list-style: none
+        padding: 1em 0.25em
 
 .site-wrapper, .read-wrapper
-	width: 100%
-	background-color: $white
-	border: 1px solid $black
-	border-radius: 5px
-	-webkit-transform: translateY(0em)
-	transform: translateY(0em)
-	-webkit-transition: 0.3s ease-out
-	transition: 0.3s ease-out
-
-	h4
-		color: $black
-		font-weight: 900
-		font-size: 1.25em
-		padding-top: 15px
-		
-		span
-			border-bottom: 2px solid $lightest-green
-
-	img
-		width: 70%
-		text-decoration: none
-
-	a
-		text-decoration: none
-		cursor: pointer
-
-	p
-		font-size: .8em
-		font-weight: 700
-		padding: 0em
-		margin: 0em
+    width: 100%
+    background-color: $white
+    border: 1px solid $black
+    border-radius: 5px
+    -webkit-transform: translateY(0em)
+    transform: translateY(0em)
+    -webkit-transition: 0.3s ease-out
+    transition: 0.3s ease-out
+    h4
+        color: $black
+        font-weight: 900
+        font-size: 1.25em
+        padding-top: 15px
+        span
+            border-bottom: 2px solid $lightest-green
+    img
+        width: 70%
+        text-decoration: none
+    a
+        text-decoration: none
+        cursor: pointer
+    p
+        font-size: 0.8em
+        font-weight: 700
+        padding: 0em
+        margin: 0em
 
 .read-wrapper
-	height: 700px
-	color: $black
-
-	img
-		width: 40px
-
-	li
-		list-style: none
-		margin: .25em 0em
-
-	h6
-		font-weight: 500
-		text-decoration: underline
-
-	p
-		font-weight: 300
+    height: 725px
+    color: $black
+    img
+        width: 40px
+    li
+        list-style: none
+        margin: 0.25em 0em
+    h6
+        font-weight: 500
+        text-decoration: underline
+    p
+        font-weight: 300
 
 .hero-section
-	height: 700px
-	width: 100%
-	font-size: 16pt
-	background: url(../images/JBAHeader.jpg) no-repeat center center 
-	-webkit-background-size: cover
-	-moz-background-size: cover
-	-o-background-size: cover
-	background-size: cover
+    height: 700px
+    width: 100%
+    font-size: 16pt
+    background: url(../images/JBAHeader.jpg) no-repeat center center
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    h1
+        color: $black
+        padding-top: 150px
+        font-weight: 300
+        text-align: center
+        font-size: 2em
+        span
+            color: $orange
+            font-weight: 500
+            font-size: 1.25em
+    .slide-container
+        position: relative
+        opacity: 0.75
+        background-color: $black
+        width: 100%
+        height: 300px
+        font-size: 16pt
+        text-align: center
+    .slide-content
+        width: 75%
+        margin: 0px auto
+        padding-top: 50px
+        font-weight: 900
+        font-size: 1.25em
+        p
+            text-align: center
+            font-color: #fff
+    .owl-prev, .owl-next
+        display: none
+    .owl-pagination
+        position: absolute
+        left: 50%
+        margin-left: -58px
+        bottom: 20px
+        font-size: 16px
+    .owl-page
+        display: inline-block
+        width: 1em
+        height: 1em
+        margin: 5px 7px
+        -webkit-border-radius: 20px
+        -moz-border-radius: 20px
+        border-radius: 20px
+        background: #fff
+    .active
+        background: $lightest-green
 
-	h1
-		color: $black
-		padding-top: 150px
-		font-weight: 300
-		text-align: center
-		font-size: 2em
-
-		span
-			color: $orange
-			font-weight: 500
-			font-size: 1.25em
-
-.slide-container
-	position: relative
-	opacity: .75
-	background-color: $black
-	width: 100%
-	height: 300px
-	font-size: 16pt
-	text-align: center
-
-.slide-content
-	width: 75%
-	margin: 0px auto
-	padding-top: 50px
-	font-weight: 900
-	font-size: 1.25em
-
-	p
-		text-align: center
-		font-color: #fff
-
-.owl-prev, .owl-next
-	display: none
-
-.owl-pagination
-	position: absolute
-	left: 50%
-	margin-left: -58px
-	bottom: 20px
-	font-size: 16px
-
-.owl-page
-	display: inline-block
-	width: 1em
-	height: 1em
-	margin: 5px 7px
-	-webkit-border-radius: 20px
-	-moz-border-radius: 20px
-	border-radius: 20px
-	background: #fff
-
-.active
-	background: $lightest-green
+.main-container
+    width: 100%
 
 .services, .about, .whyChooseUs, .contact
-	background-color: $dark-grey
-	font-size: 16pt
-
-	h1
-		text-align: center
-		font-size: 2.75em
-		color: $white
-		margin-top: 1.25em
-		font-weight: 100
-		margin-bottom: .75em
-
-.services-title
-	text-align: center
-	font-weight: 100
-	margin-top: 2em
-	font-size: 2em
-
-	span
-		color: $orange
-		font-weight: 500
-		text-decoration: underline
-
-.glyphicon, .glyphicon-calendar
-	text-align: center
-	width: 2.5em
-
-.glyphicon-calendar
-	width: 1.8em
-
-.gly-title
-	margin: 1em
-	font-size: 1.15em
-	font-weight: 100
-
-.individual
-	font-size: 16pt
-	padding-bottom: 5em
-
-.ind-quote, .bus-quote, .why-quote, .platorm-quote
-	font-weight: 300
-	font-size: 1em
-	margin-top: 2em
-	margin-bottom: 0em
-	font-style: italic
-	color: $white
-
-	span
-		color: $lightest-green
-		font-weight: 500
-
-.ind-title, .bus-title, .why-title
-	font-size: 1.15em
-	font-weight: 500
-	text-alight: center
-	position: relative
-	&:hover
-		cursor: pointer
-		font-weight: 900
-
-	span
-		&:hover
-			border-bottom: 1px solid $light-green
-
-.plus, .plus-why
-	position: absolute
-	color: $lightest-green
-	left: 50%
-	margin-top: 30px
-	-webkit-transition: 0.3s ease-out
-
-	img
-		width: .5em
-		transform: rotate(0deg)
-		-webkit-transition: 0.3s ease-out
-
-.rotate-open
-	transform: rotate(135deg)
-	position: absolute
-	-webkit-transition: .3s ease-out
-
-.rotate-closed
-	transform: rotate(-135deg)
-	position: absolute
-	-webkit-transition: .3s ease-out
-
-
-.ind-content, .bus-content
-	position: relative
-	color: $white
-	margin: 1em 0em 
-
-	p
-		font-size: .75em
-		font-weight: 100
-		padding: 0px 25px 0px 25px
-
-		span
-			color: $orange
-
-		.span-bold
-			color: $white
-			font-weight: 700
-
-	.break
-		margin-top: 1em
-		padding-top: 1em
-
-	ul
-		font-size: .75em
-		font-weight: 100
-		margin-left: 5em
-
-.ind-subTitle, .bus-subTitle
-	margin: 1.5em 0em .5em 0em 
-	font-size: 1em
-	font-weight: 700
-
-.accordian-content-1, .accordian-content-2, .accordian-content-3, .accordian-content-4, .accordian-content-5, .accordian-content-6, .why-content
-	margin-top: 25px
-	margin-bottom: 50px
-
-.open-accordian
-	transition: .3s ease-out
-	margin-top: 25px
-
-table
-	margin: 0px auto
-	font-size: .75em
-	font-weight: 100
-
-	tr
-		margin: .25em
-
-		td
-			padding: 2px 10px 2px 10px
-
-.economic-model
-	font-size: 16pt
-	font-style: italic
-	text-align: center
-	margin-top: 2.5em
-	margin-bottom: -3.5em
-	padding-bottom: 1.5em
-	border-bottom: 2px solid $white
-
-	a
-		cursor: pointer
-
-	h4
-		font-size: 1.10em
-		font-weight: 100
-		margin-top: 2em
-		margin-bottom: 0em
-
-	span
-		text-decoration: none
-		color: $light-green
-		font-size: 1.15em
-		font-weight: 700
-
-	img
-		margin-top: 1em
-		width: 100%
-
-.video-wrapper
-	margin: 0px auto
-	width: 400px
-	height: 250px
-	overflow: hidden
-	&:hover
-		.video-prompt
-			margin-top: -30px
-			-webkit-transition: 0.2s ease-out
-			transition: 0.2s ease-out
-
-	.video-prompt
-		width: 100%
-		font-size: .75em
-		text-decoration: bold
-		height: 30px
-		background-color: $black
-		opacity: .9
-		margin-top: 10px
-		line-height: 30px
-		-webkit-transition: 0.3s ease-out
-		transition: 0.3s ease-out
-
-.business
-	background-color: $dark-grey
-	font-size: 16pt
-	padding-bottom: 4.5em
-
-	h2
-		color: $white
-
-		span
-			color: $orange
-
-	p
-		span
-			font-size: 1.25em
-			font-weight: 500
-
-	.bus-image
-		text-align: center
-		padding: 1.5em 0em 1.5em 0em
-
-	.bus-quote
-		color: $white
-
-		span
-			color: $lightest-green
-
-	.bus-title
-		font-size: 1.15em
+    background-color: $dark-grey
+    font-size: 16pt
+    h1
+        text-align: center
+        font-size: 2.75em
+        color: $white
+        margin-top: 1.25em
+        font-weight: 300
+        margin-bottom: 0.75em
+    .services-title
+        text-align: center
+        font-weight: 300
+        margin-top: 2em
+        font-size: 2em
+        span
+            color: $orange
+            font-weight: 500
+            text-decoration: underline
+    .glyphicon-calendar, .glyphicon-road, .glyphicon-usd
+        font-size: 25pt
+        color: $lightest-green
+    .gly-title
+        margin: 1em
+        font-size: 1.15em
+        font-weight: 300
+    .individual
+        font-size: 16pt
+        padding-bottom: 5em
+    .ind-quote, .bus-quote, .why-quote, .platorm-quote
+        font-weight: 300
+        font-size: 1em
+        margin-top: 2em
+        margin-bottom: 0em
+        font-style: italic
+        color: $white
+        span
+            color: $lightest-green
+            font-weight: 500
+    .ind-title, .bus-title, .why-title
+        font-size: 1.15em
+        font-weight: 500
+        text-alight: center
+        position: relative
+        margin: 0px
+        &:hover
+            cursor: pointer
+            font-weight: 700
+            .plus, .plus-why
+                display: block
+        span
+            &:hover
+                border-bottom: 1px solid $light-green
+    .why-title
+        &:hover
+            cursor: pointer
+            font-weight: 500
+    .plus, .plus-why
+        display: none
+        position: absolute
+        color: $lightest-green
+        left: 50%
+        -webkit-transition: 0.3s ease-out
+    .plus-why
+        color: $dark-green
+        margin-left: -8px
+    .rotate-open
+        transform: rotate(135deg)
+        position: absolute
+        -webkit-transition: 0.3s ease-out
+    .rotate-closed
+        transform: rotate(-135deg)
+        position: absolute
+        -webkit-transition: 0.3s ease-out
+    .ind-content, .bus-content
+        position: relative
+        color: $white
+        margin: 1em 0em
+        p
+            font-size: 0.85em
+            font-weight: 300
+            padding: 0px 25px 0px 25px
+            span
+                color: $orange
+                font-weight: 500
+            .span-bold
+                color: $orange
+                font-weight: 700
+                font-style: italic
+        .break
+            margin-top: 1em
+            padding-top: 1em
+        ul
+            font-size: 0.75em
+            font-weight: 700
+            margin-left: 5em
+            li
+                color: $orange
+    .ind-subTitle, .bus-subTitle
+        margin: 1.5em 0em 0.5em 0em
+        font-size: 1em
+        font-weight: 700
+    .accordian-content-1, .accordian-content-2, .accordian-content-3, .accordian-content-4, .accordian-content-5, .accordian-content-6, .why-content
+        margin-top: 28px
+        margin-bottom: 50px
+    .open-accordian
+        transition: 0.3s ease-out
+        margin-top: 25px
+    table
+        margin: 0px auto
+        font-size: 0.75em
+        font-weight: 100
+        tr
+            margin: 0.25em
+            td
+                padding: 2px 10px 2px 10px
+    .economic-model
+        font-size: 16pt
+        font-style: italic
+        text-align: center
+        margin-top: 2.5em
+        margin-bottom: -3.5em
+        padding-bottom: 1.5em
+        border-bottom: 2px solid $white
+        a
+            cursor: pointer
+        h4
+            font-size: 1.1em
+            font-weight: 300
+            margin-top: 2em
+            margin-bottom: 0em
+        span
+            text-decoration: none
+            color: $light-green
+            font-size: 1.15em
+            font-weight: 700
+        img
+            margin-top: 1em
+            width: 100%
+    .video-wrapper
+        margin: 0px auto
+        width: 500px
+        height: 250px
+        padding: 0.75em
+    .business
+        background-color: $dark-grey
+        font-size: 16pt
+        padding-bottom: 4.5em
+        h2
+            color: $white
+            span
+                color: $orange
+        p
+            span
+                font-size: 1.25em
+                font-weight: 500
+        .bus-content
+            li
+                font-weight: 500
+                color: $orange
+        .bus-image
+            text-align: center
+            padding: 1.5em 0em 1.5em 0em
+        .bus-quote
+            color: $white
+            span
+                color: $lightest-green
+        .bus-title
+            font-size: 1.15em
 
 .about
-	position: relative
-	background-color: $off-white
-	font-size: 16pt
-	padding-bottom: 75px
-
-	h1
-		color: $black
-
-	.about-content
-		width: 100%
-		color: $off-black
-		font-size: 1em
-		font-weight: 300
-
-		span
-			color: $light-green
-			font-weight: 700
-
-		p
-			margin: 1.25em 0em
-
-		ul
-			font-size: .75em
-			font-weight: 700
-			margin-left: 5em
-
-	.about-img
-		margin: 0px auto
-		width: 200px
-		background-color: $black
-		border-radius: 100px
-
-		a
-			cursor: pointer
-
-		img
-			border-radius: 100px
-			width: 100%
-			opacity: .7
-
-			&:hover
-				opacity: 1
-
-		.about-img-blurb
-			width: 200px
-			position: absolute
-			top: 80%
-			text-align: center
-			font-size: .75em
-			font-weight: 700
+    position: relative
+    background-color: $off-white
+    font-size: 16pt
+    padding-bottom: 75px
+    h1
+        color: $black
+    .about-content
+        width: 100%
+        color: $off-black
+        font-size: 1em
+        font-weight: 300
+        span
+            color: $light-green
+            font-weight: 700
+        p
+            margin: 1.25em 0em
+        ul
+            font-size: 0.75em
+            font-weight: 700
+            margin-left: 5em
+    .about-img
+        margin: 0px auto
+        width: 200px
+        background-color: $black
+        border-radius: 100px
+        &:hover
+            .about-img-blurb
+                display: block
+        a
+            cursor: pointer
+        img
+            border-radius: 100px
+            width: 100%
+            opacity: 0.7
+            &:hover
+                opacity: 1
+        .about-img-blurb
+            display: none
+            width: 200px
+            position: absolute
+            top: 80%
+            text-align: center
+            font-size: 0.75em
+            font-weight: 700
 
 .whyChooseUs
-	background-color: $lightest-grey
-	font-size: 16pt
-	padding-bottom: 2em
-
-	h1
-		color: $off-black
-		font-weight: 100
-
-	h2
-		color: $white
-		font-weight: 500
-		span
-			color: $dark-green
-			font-weight: 900
-
-	h3
-		color: $black
-		font-weight: 300
-		font-size: .85em
-		cursor: pointer
-		&:hover
-			color: $off-black
-			font-weight: 900
-			text-decoration: none
-
-		span
-			cursor: pointer
-			color: $off-white
-
-	.why-container
-		margin-top: 2.5em
-
-	.why-section
-		margin: 1.5em 0em
-		border-radius: 5px
-
-	.lrg-img
-		width: 1.15em
-
-	h4
-		text-align: center
-		font-size: 1.25em
-		font-weight: 500
-		color: $white
-
-		span
-			color: $dark-green
-			font-weight: 500
-
-	.why-content
-		background-color: $off-black
-		font-size: .75em
-		color: $off-white
-		font-weight: 100
-		padding: .75em
-		border-radius: 5px
-		margin-top: 2em
-		text-indent: 1em
-
-		span
-			font-weight: 500
-			color: $orange
-
-		.focus
-			font-weight: 900
-			color: $off-white
+    background-color: #a0a0a0
+    font-size: 16pt
+    padding-bottom: 2em
+    h1
+        color: $off-black
+        font-weight: 300
+    h2
+        color: $white
+        font-weight: 700
+    .why-quote
+        span
+            color: $dark-green
+            font-weight: 900
+    h3
+        color: $black
+        font-weight: 500
+        font-size: 0.85em
+        cursor: pointer
+        margin: 0px
+        &:hover
+            color: $off-black
+            font-weight: 900
+            text-decoration: none
+        span
+            cursor: pointer
+            color: $off-white
+    .why-container
+        margin-top: 2.5em
+        padding-bottom: 20px
+    .why-section
+        margin: 1.5em 0em
+        border-radius: 5px
+    .glyphicon-user, .glyphicon-stats, .glyphicon-transfer, .glyphicon-star, .glyphicon-lock, .glyphicon-barcode, .glyphicon-globe, .glyphicon-cloud
+        font-size: 20pt
+        color: $dark-green
+    h4
+        text-align: center
+        font-size: 1.25em
+        font-weight: 500
+        color: $white
+        span
+            color: $dark-green
+            font-weight: 500
+    .why-content
+        background-color: $off-black
+        font-size: 0.75em
+        color: $white
+        font-weight: 300
+        padding: 0.75em
+        border-radius: 5px
+        margin-top: 2em
+        text-indent: 1em
+        span
+            font-weight: 500
+            color: $orange
+        .focus
+            font-weight: 900
+            color: $off-white
 
 .contact
-	background-color: $light-black
-	width: 100%
-	padding-bottom: 100px
-	font-size: 16pt
-	position: relative
-
-	.contact-wrapper
-		width: 100%
-		background-color: $off-white
-		text-align: center
-		padding: 1.5em
-		border-radius: 5px
-		position: relative
-
-	.form-container
-		text-align: center
-
-		h3
-			font-size: 1.15em
-			font-weight: 500
-			text-decoration: underline
-
-		h4
-			font-size: .75em
-			font-weight: 300
-
-		input, textarea
-			font-size: .65em
-			font-weight: 500
-			width: 75%
-
-		p
-			font-size: .60em
-
-		textarea
-			height: 100px
-
-		.submit
-			input
-				background-color: $dark-green
-				font-size: .75em
-				font-weight: 500
-				border-radius: 5px
-				width: 50%
-				color: $white
-
-	.input-text:
-		color: $black
-		font-size: .75em
-
-	.contact-banner
-		width: 100%
-		background: url(../images/contact-img.png)
-		background-size: cover
-
-		h1
-			color: $black
-			font-weight: 500
-			padding: 1em 0em
-			text-align: center
-			z-index: 2
-
-	iframe
-		width: 90%
-		height: 400px
-		border: 2px solid $black
-		margin: 0px auto
-
-	.contact-content, .form-container
-		width: 100%
-		margin: 0px auto
-		background-color: $off-white
-		text-align: center
-		opacity: .8
-		color: $black
-
-		img
-			text-align: center
-			width: 50%
-			padding: .5em 0em
-			margin-bottom: .75em
-
-		h2
-			margin-top: 0em
-			font-weight: 300
-			text-decoration: underline
-			font-size: 2em
-			text-align: center
-			color: $dark-green
-
-		h4, h5
-			text-align: center
-			margin: 0em
-			padding: .25em 0em
-
-	.contact-info
-		padding: 1em 0em
-		font-weight: 100
-		font-size: .75em
-		color: $black
-
-		img
-			text-align: center
-			width: 30px
-			margin: 0em
-			padding: 0em
-
-		h4
-			text-align: center
-
-		h5, a
-			margin: .5em 0em 
-			text-align: center
-			font-size: 1em
-
-		a
-			color: $black
-			font-size: .5
-			font-weight: 500
-			text-decoration: none
-			&:hover
-				cursor: pointer
-				font-weight: 900
-				img
-					width: 30px
-
+    background-color: $light-black
+    width: 100%
+    padding-bottom: 50px
+    font-size: 16pt
+    position: relative
+    h6
+        text-align: center
+        font-size: 0.75em
+        font-weight: 100
+    .contact-wrapper
+        width: 100%
+        background-color: $off-white
+        text-align: center
+        padding: 1.5em
+        border-radius: 5px
+        position: relative
+    .form-container
+        text-align: center
+        h3
+            font-size: 1.15em
+            font-weight: 500
+            text-decoration: underline
+        h4
+            font-size: 0.75em
+            font-weight: 300
+        input, textarea
+            font-size: 0.65em
+            font-weight: 500
+            width: 75%
+        p
+            font-size: 0.6em
+        textarea
+            height: 100px
+        .submit
+            input
+                background-color: $dark-green
+                font-size: 0.75em
+                font-weight: 500
+                border-radius: 5px
+                width: 50%
+                color: $white
+    .input-text:
+        color: $black
+        font-size: 0.75em
+    .contact-banner
+        width: 100%
+        background: url(../images/contact-img.png)
+        background-size: cover
+        h1
+            color: $black
+            font-weight: 500
+            padding: 1em 0em
+            text-align: center
+            z-index: 2
+            margin-top: 0px
+    iframe
+        width: 90%
+        height: 400px
+        border: 2px solid $black
+        margin: 0px auto
+    .contact-content, .form-container
+        width: 100%
+        margin: 0px auto
+        background-color: $off-white
+        text-align: center
+        opacity: 0.8
+        color: $black
+    .glyphicon-home, .glyphicon-envelope, .glyphicon-earphone, .glyphicon-print
+        font-size: 20pt
+        color: $dark-green
+        font-weight: 900
+        img
+            text-align: center
+            width: 50%
+            padding: 0.5em 0em
+            margin-bottom: 0.75em
+        h2
+            margin-top: 0em
+            font-weight: 300
+            text-decoration: underline
+            font-size: 2em
+            text-align: center
+            color: $dark-green
+        h4, h5
+            text-align: center
+            margin: 0em
+            padding: 0.25em 0em
+    .contact-info
+        padding: 1em 0em
+        font-weight: 100
+        font-size: 0.75em
+        color: $black
+        img
+            text-align: center
+            width: 30px
+            margin: 0em
+            padding: 0em
+        h4
+            text-align: center
+        h5, a
+            margin: 0.5em 0em
+            text-align: center
+            font-size: 0.85em
+        a
+            color: $black
+            font-size: 0.5
+            font-weight: 500
+            text-decoration: none
+            &:hover
+                cursor: pointer
+                font-weight: 900
+                img
+                    width: 30px
 
 .resume-content, .platform-content, .terms-content
-	position: fixed
-	padding: 1em 1.5em
-	opacity: 1
-	z-index: 10002
-	top: 10%
-	left: 50%
-	margin-left: -300px
-	width: 600px
-	height: 600px
-	background-color: $off-white
-	font-size: 16pt
-	font-weight: 500
-	color: $off-black
-	border: 2px solid $white
-	overflow-y: scroll
+    position: fixed
+    padding: 1em 1.5em
+    opacity: 1
+    z-index: 10002
+    top: 10%
+    left: 50%
+    margin-left: -300px
+    width: 600px
+    height: 600px
+    background-color: $off-white
+    font-size: 16pt
+    font-weight: 500
+    color: $off-black
+    border: 2px solid $white
+    overflow-y: scroll
+    h2
+        color: $dark-green
+        font-size: 1.8em
+        text-align: center
+        font-weight: 900
+    p
+        font-size: 0.8em
+        margin: 1em 0em
+        text-indent: 1.5em
+    ul
+        margin-left: 4.5em
+        span
+            color: $black
+            font-weight: 900
+    h4
+        font-size: 1.25em
+        font-weight: 700
+        color: $orange
+    a
+        cursor: pointer
 
-	h2
-		color: $dark-green
-		font-size: 1.8em
-		text-align: center
-		font-weight: 900
+.platform-content, .terms-content
+    font-size: 16pt
+    h3
+        text-align: center
+        margin-top: 1em
+        margin-bottom: 1.5em
+        color: $orange
+        font-size: 1.15em
+        font-weight: 300
+    h4
+        margin-bottom: 1.15em
+        a
+            text-decoration: none
+            color: $black
+            cursor: pointer
+            &:hover
+                text-decoration: underline
+                color: $black
+                cursor: pointer
+    img
+        float: left
+        margin: 0em 1.5em
+    section
+        margin: 1.5em 0em
+        div
+            height: 90px
 
-	p
-		font-size: .8em
-		margin: 1em 0em
-		text-indent: 1.5em
-
-	ul
-		margin-left: 4.5em
-
-		span
-			color: $black
-			font-weight: 900
-
-	h4
-		font-size: 1.25em
-		font-weight: 700
-		color: $orange
-
-.platform-content
-	h3
-		text-align: center
-		margin-top: 1em
-		margin-bottom: 1.5em
-		color: $orange
-		font-size: 1.15em
-		font-weight: 300
-
-	h4
-		margin-bottom: 1.15em
-
-		a
-			text-decoration: none
-			color: $black
-			cursor: pointer
-			&:hover
-				text-decoration: underline
-				color: $black
-				cursor: pointer
-
-	img
-		float: left
-		margin: 0em 1.5em
-
-	section
-		margin: 1.5em 0em
-
-		div
-			height: 90px
+.terms-content
+    h4
+        text-align: center
+        font-size: 1em
+        text-decoration: underline
+    h5
+        text-align: center
+        font-size: 0.9em
+        text-decoration: underline
+    h6
+        font-size: 0.8em
+        text-align: left
+    li
+        font-size: 0.75em
 
 .social-wrapper
-	position: absolute
-	bottom: 0%
-	right: 0%
+    position: absolute
+    bottom: 0%
+    right: 1%
+    .social
+        text-align: center
+        a
+            cursor: pointer
 
-	.social
-		text-align: center
+/*Media Queries
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/* large
+@media (min-width: 2000px)
 
-		a
-			cursor: pointer
+/* medium
+@media (max-width: 1200px)
+    nav
+        .nav-bar
+            height: 70px
+        .nav-menu
+            display: none
+        .company-logo
+            width: 60px
+            margin-left: 2%
+        .login-menu
+            font-size: 0.9em
+            width: 460px
+            &:hover
+                .account-login
+                    top: 57px
+            .account-btn, .financial-btn
+                width: 230px
+                padding: 16px
+            .account-login
+                width: 300px
+                top: -25px
+    .bot-nav-bar
+        font-size: 18pt
+    .services
+        .plus
+            display: block
+        .business
+            .plus
+                display: block
+    .about
+        .about-img
+            opacity: 1
+            .about-img-blurb
+                display: block
+    .whyChooseUs
+        .plus-why
+            display: block
+    .contact
+        h6
+            font-weight: 500
 
-		img
-			border-radius: 16px
+/* small
+@media (max-width: 992px)
+    nav
+        .nav-bar
+            height: 70px
+        .nav-menu
+            display: none
+        .company-logo
+            width: 60px
+            margin-left: 2%
+        .login-menu
+            font-size: 0.9em
+            width: 460px
+            &:hover
+                .account-login
+                    top: 57px
+            .account-btn, .financial-btn
+                width: 230px
+                padding: 16px
+            .account-login
+                width: 300px
+                top: -25px
+    .bot-nav-bar
+        font-size: 18pt
+    .services
+        .plus
+            display: block
+        .business
+            .plus
+                display: block
+    .about
+        .about-img
+            opacity: 1
+            .about-img-blurb
+                display: block
+    .whyChooseUs
+        .plus-why
+            display: block
+    .contact
+        h6
+            font-weight: 500
 
-
-.lightbox
-	position: fixed
-	margin: 0px auto
-	top: 0px
-	width: 100%
-	opacity: .9
-	background-color: $black
-	z-index: 10001
-	height: 1000px
-
-.lightbox-vid
-	position: fixed
-	top: 5%
-	left: 15%
-	margin: 0px auto
-	opacity: 1
-	z-index: 100001
-
-.economic-video
-	height: 570px
-	width: 960px
+/* xtra-smaill
+@media (max-width: 767px)
+    $off-white: #fff
+    nav
+        .nav-bar
+            height: 55px
+        .nav-menu
+            display: none
+        .company-logo
+            width: 48px
+            margin-left: 1%
+        .login-menu
+            font-size: 7pt
+            right: 0%
+            width: 280px
+            .account-btn, .financial-btn
+                width: 140px
+    .bot-nav-bar
+        display: none
+    .hero-section
+        font-size: 10pt
+        height: 400px
+        h1
+            padding-top: 75px
+        .owl-carousel
+            margin-top: 20px
+        .slide-container
+            height: 210px
+            font-size: 8.5pt
+        .owl-pagination
+            font-size: 10pt
+            margin-left: -55px
+            bottom: 0px
+    .services
+        font-size: 13pt
+        padding: 0em 10px
+        .glyphicon-calendar, .glyphicon-road, .glyphicon-usd
+            font-size: 18pt
+        .individual
+            font-size: 13pt
+            padding-bottom: 0em
+            h1
+                color: $white
+                font-weight: 300
+            .ind-content
+                margin: 1.25em 0em
+                p
+                    font-weight: 500
+                    .span-bold
+                        font-weight: 900
+        .gly-title
+            color: $white
+            font-weight: 500
+        .plus
+            display: block
+        .economic-model
+            font-size: 13pt
+            display: none
+        .business
+            font-size: 13pt
+            padding-top: 0em
+            .plus
+                display: block
+            .bus-content
+                margin-bottom: 25px
+            .bus-image
+                img
+                    width: 90%
+    .about
+        font-size: 13pt
+        padding: 0em 10px
+        h1
+            font-weight: 300
+        .about-img
+            width: 150px
+            margin-bottom: 20px
+            display: none
+            .about-img-blurb
+                display: block
+                width: 150px
+    .whyChooseUs
+        font-size: 13pt
+        padding: 0em 10px
+        h1
+            font-weight: 300
+        h3
+            font-weight: 500
+        .why-title
+            font-size: 1.5em
+            font-weight: 500
+        .why-content
+            font-weight: 500
+            font-size: 0.85em
+        .plus-why
+            display: block
+    .contact
+        font-size: 13pt
+        .contact-info
+            font-size: 1em
+            div
+                padding-bottom: 15px
+        iframe
+            height: 300px
+        h6
+            font-weight: 500
+            font-size: 0.8em
+            padding: 5px
+        .social-wrapper
+            position: relative
+            right: 0%
+            img
+                width: 75px
+                padding-bottom: 15px
