@@ -358,7 +358,7 @@ nav {
   .services table, .about table, .whyChooseUs table, .contact table {
     margin: 0px auto;
     font-size: 0.75em;
-    font-weight: 100; }
+    font-weight: 500; }
     .services table tr, .about table tr, .whyChooseUs table tr, .contact table tr {
       margin: 0.25em; }
       .services table tr td, .about table tr td, .whyChooseUs table tr td, .contact table tr td {
@@ -470,9 +470,11 @@ nav {
   .whyChooseUs h2 {
     color: #fff;
     font-weight: 700; }
-  .whyChooseUs .why-quote span {
-    color: #005d27;
-    font-weight: 900; }
+  .whyChooseUs .why-quote {
+    font-weight: 500; }
+    .whyChooseUs .why-quote span {
+      color: #005d27;
+      font-weight: 900; }
   .whyChooseUs h3 {
     color: #000;
     font-weight: 500;
@@ -716,12 +718,13 @@ nav {
   right: 1%; }
   .social-wrapper .social {
     text-align: center; }
+    .social-wrapper .social img {
+      width: 60px; }
     .social-wrapper .social a {
       cursor: pointer; }
 
 /*Media Queries */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* large */
 /* medium */
 @media (max-width: 1200px) {
   nav .nav-bar {
@@ -744,7 +747,7 @@ nav {
       top: -25px; }
 
   .bot-nav-bar {
-    font-size: 18pt; }
+    font-size: 13.5pt; }
 
   .services .plus {
     display: block; }
@@ -799,7 +802,13 @@ nav {
     display: block; }
 
   .contact h6 {
-    font-weight: 500; } }
+    font-weight: 500; }
+  .contact .social-wrapper {
+    position: relative;
+    right: 0%; }
+    .contact .social-wrapper img {
+      width: 80px;
+      padding-bottom: 15px; } }
 /* xtra-smaill */
 @media (max-width: 767px) {
   nav .nav-bar {

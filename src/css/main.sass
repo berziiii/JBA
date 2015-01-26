@@ -385,7 +385,7 @@ nav
     table
         margin: 0px auto
         font-size: 0.75em
-        font-weight: 100
+        font-weight: 500
         tr
             margin: 0.25em
             td
@@ -501,6 +501,7 @@ nav
         color: $white
         font-weight: 700
     .why-quote
+        font-weight: 500
         span
             color: $dark-green
             font-weight: 900
@@ -750,14 +751,13 @@ nav
     right: 1%
     .social
         text-align: center
+        img
+            width: 60px
         a
             cursor: pointer
 
 /*Media Queries
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/* large
-@media (min-width: 2000px)
-
 /* medium
 @media (max-width: 1200px)
     nav
@@ -781,7 +781,7 @@ nav
                 width: 300px
                 top: -25px
     .bot-nav-bar
-        font-size: 18pt
+        font-size: 13.5pt
     .services
         .plus
             display: block
@@ -841,6 +841,13 @@ nav
     .contact
         h6
             font-weight: 500
+
+        .social-wrapper
+            position: relative
+            right: 0%
+            img
+                width: 80px
+                padding-bottom: 15px
 
 /* xtra-smaill
 @media (max-width: 767px)
