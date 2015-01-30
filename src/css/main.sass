@@ -14,6 +14,7 @@ html, body, ul, ol
     -webkit-box-sizing: border-box
     -moz-box-sizing: border-box
     -ms-box-sizing: border-box
+    -o-sizing: border-box
     box-sizing: border-box
 
 $dark-green: #005d27
@@ -48,8 +49,14 @@ $light-black: #424242
 
 .open-subMenu
     -webkit-transform: translateY(100%)
+    -moz-transform: translateY(100%)
+    -ms-transform: translateY(100%)
+    -o-transform: translateY(100%)
     transform: translateY(100%)
     -webkit-transition: 0.3s ease-out
+    -moz-transition: 0.3s ease-out
+    -ms-transition: 0.3s ease-out
+    -o-transition: 0.3s ease-out
     transition: 0.3s ease-out
 
 /* Module Class
@@ -153,6 +160,9 @@ nav
         .site-wrapper, .read-wrapper
             margin-top: -600px
             -webkit-transition: 0.4s ease-out
+            -moz-transition: 0.4s ease-out
+            -ms-transition: 0.4s ease-out
+            -o-transition: 0.4s ease-out
             transition: 0.4s ease-out
         .read-wrapper
             margin-top: -725px
@@ -179,8 +189,14 @@ nav
     border: 1px solid $black
     border-radius: 5px
     -webkit-transform: translateY(0em)
+    -moz-transform: translateY(0em)
+    -ms-transform: translateY(0em)
+    -o-transform: translateY(0em)
     transform: translateY(0em)
     -webkit-transition: 0.3s ease-out
+    -moz-transition: 0.3s ease-out
+    -ms-transition: 0.3s ease-out
+    -o-transition: 0.3s ease-out
     transition: 0.3s ease-out
     h4
         color: $black
@@ -222,6 +238,7 @@ nav
     background: url(../images/JBAHeader.jpg) no-repeat center center
     -webkit-background-size: cover
     -moz-background-size: cover
+    -ms-background-size: cover
     -o-background-size: cover
     background-size: cover
     h1
@@ -266,6 +283,8 @@ nav
         margin: 5px 7px
         -webkit-border-radius: 20px
         -moz-border-radius: 20px
+        -ms-border-radius: 20px
+        -o-border-radius: 20px
         border-radius: 20px
         background: #fff
     .active
@@ -337,6 +356,10 @@ nav
         color: $lightest-green
         left: 50%
         -webkit-transition: 0.3s ease-out
+        -moz-transition: 0.3s ease-out
+        -ms-transition: 0.3s ease-out
+        -o-transition: 0.3s ease-out
+
     .plus-why
         color: $dark-green
         margin-left: -8px
@@ -344,10 +367,16 @@ nav
         transform: rotate(135deg)
         position: absolute
         -webkit-transition: 0.3s ease-out
+        -moz-transition: 0.3s ease-out
+        -ms-transition: 0.3s ease-out
+        -o-transition: 0.3s ease-out
     .rotate-closed
         transform: rotate(-135deg)
         position: absolute
         -webkit-transition: 0.3s ease-out
+        -moz-transition: 0.3s ease-out
+        -ms-transition: 0.3s ease-out
+        -o-transition: 0.3s ease-out
     .ind-content, .bus-content
         position: relative
         color: $white
@@ -559,7 +588,7 @@ nav
     h6
         text-align: center
         font-size: 0.75em
-        font-weight: 100
+        font-weight: 500
     .contact-wrapper
         width: 100%
         background-color: $off-white
@@ -573,9 +602,6 @@ nav
             font-size: 1.15em
             font-weight: 500
             text-decoration: underline
-        h4
-            font-size: 0.75em
-            font-weight: 300
         input, textarea
             font-size: 0.65em
             font-weight: 500
@@ -584,6 +610,12 @@ nav
             font-size: 0.6em
         textarea
             height: 100px
+        label
+            font-size: 14pt
+
+        .form-control
+            margin: 0px auto
+
         .submit
             input
                 background-color: $dark-green
@@ -745,13 +777,15 @@ nav
         font-size: 0.75em
 
 .social-wrapper
-    position: absolute
     bottom: 0%
-    right: 1%
+
     .social
         text-align: center
         a
             cursor: pointer
+
+            img
+                width: 65px
 
 /*Media Queries
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -950,8 +984,6 @@ nav
             font-size: 0.8em
             padding: 5px
         .social-wrapper
-            position: relative
-            right: 0%
             img
                 width: 75px
                 padding-bottom: 15px
@@ -967,6 +999,11 @@ nav
 
         .company-logo
             width: 45px
+
+    .services
+        .services-title
+            padding-top: 1em
+            border-top: 1px solid $white
 
     .about 
         .about-content 

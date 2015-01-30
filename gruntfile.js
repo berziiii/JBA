@@ -30,7 +30,7 @@ module.exports = function(grunt) {
         // Prefix the CSS
         autoprefixer: {
             options: {
-                browsers: ["last 2 versions", "> 1%", "ie 8", "ie 7"]
+                browsers: ["last 2 versions", "> 5%", "ie 8", "ie 7"]
             },
             your_target: {
                 options: {
