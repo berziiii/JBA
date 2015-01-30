@@ -24,13 +24,8 @@ $("#slider").owlCarousel({
   autoPlay: 10000
 });
 
-<<<<<<< HEAD
-// Individual collapse blurbs 
-=======
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
->>>>>>> FETCH_HEAD
+// Individual collapse blurbs 
 
 var expandAccordion = function(e) {
   $('#plus-' + e.data.index).toggleClass('rotate-open');
@@ -43,6 +38,7 @@ for (var i = 1; i <= 4; i++) {
 }
 
 // Business collapse blurbs
+
 var expandAccordion = function(e) {
   $('#plus-' + e.data.index).toggleClass('rotate-open');
   $('.accordian-content-' + e.data.index).collapse('toggle');
@@ -53,12 +49,9 @@ for (var i = 5; i <= 6; i++) {
   $('#plus-' + i).click({ index: i }, expandAccordion);
 }
 
-<<<<<<< HEAD
-// Why collapse blurbs
-=======
 
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
->>>>>>> FETCH_HEAD
+// Why collapse blurbs
+
 
 var expandWhy = function(e) {
   $('#plus-why-' + e.data.index).toggleClass('rotate-open');
@@ -70,35 +63,26 @@ for (var i = 1; i <=8; i++) {
   $('#plus-why-' + i).click({ index: i }, expandWhy);
 }
 
-<<<<<<< HEAD
+
 
 // Resume Content modal
-=======
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-//Resume Content modal//
->>>>>>> FETCH_HEAD
+
 
 $('#openResumeContent').on('click', function () {
   $('#resumeContent').modal('show')
 });
 
-<<<<<<< HEAD
+
 // Platform Content modal
-=======
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-//Platform Content modal//
->>>>>>> FETCH_HEAD
+
 
 $('#openPlatform').on('click', function () {
   $('#platformContent').modal('show')
 });
 
-<<<<<<< HEAD
+
 // Terms Content modal
-=======
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-//Terms Content modal//
->>>>>>> FETCH_HEAD
+
 
 $('#openTermsContent').on('click', function () {
   $('#termsContent').modal('show')

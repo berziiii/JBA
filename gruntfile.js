@@ -23,7 +23,8 @@ module.exports = function(grunt) {
         uglify: {
             js : {
                 files: {
-                    'dist/js/index.js': ['src/js/*.js']
+                    'dist/js/index.min.js': 'src/js/index.js', 
+                    'dist/js/jqBootstrapValidation.min.js':'src/js/jqBootstrapValidation.js'
                 }
             },
         },
