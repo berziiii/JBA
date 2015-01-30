@@ -8,13 +8,11 @@
     "grunt-contrib-concat": "*",
     "grunt-contrib-cssmin": "*",
     "grunt-contrib-htmlmin": "*",
-    "grunt-contrib-sass": "^0.8.1",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-copy": "^0.1.0",
     "grunt-imageoptim": "*",
     "grunt-notify": "*",
-    "grunt-sass": "*",
     "grunt-sync": "*",
     "matchdep": "*",
     "node-sass": "*"
