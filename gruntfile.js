@@ -19,15 +19,6 @@ module.exports = function(grunt) {
                 dest : 'test/css/main-concat.css'
             },
         },
-        //- Uglify concatenated and other JS files
-        uglify: {
-            js : {
-                files: {
-                    'dist/js/index.min.js': 'src/js/index.js', 
-                    'dist/js/jqBootstrapValidation.min.js':'src/js/jqBootstrapValidation.js'
-                }
-            },
-        },
         // Prefix the CSS
         autoprefixer: {
             options: {
@@ -74,7 +65,8 @@ module.exports = function(grunt) {
                     src: [
                         'assets/**',
                         'images/**',
-                        '*accounts/**'
+                        '*accounts/**',
+                        'js/**'
                     ],
                     dest: 'dist'
                     }],
@@ -110,7 +102,7 @@ module.exports = function(grunt) {
     });
     //- REGISTER ALL OUR GRUNT TASKS
     grunt.task.run('notify_hooks');
-    grunt.registerTask('default', ['concat', 'uglify', 'autoprefixer', 'cssmin', 'htmlmin', 'sync', 'watch']);
+    grunt.registerTask('default', ['concat', 'autoprefixer', 'cssmin', 'htmlmin', 'sync', 'watch']);
     grunt.registerTask('app_change', ['concat:app', 'uglify:app', 'uglify:main']);
     grunt.registerTask('concat_change', ['uglify:app']);
     grunt.registerTask('css_prefixed', ['autoprefixer']);

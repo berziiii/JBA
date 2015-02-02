@@ -601,13 +601,13 @@
                                         <div id="consultation-notification">
                                         </div>
                                         <form id="consultation-form" validate>
-                                            <div class="form-group">
-                                                <label for="ConsultationFormName">Name *</label>
-                                               <input type="text" class="form-control" name="data[ConsultationForm][name]" id="ConsultationFormName" placeholder="Enter name" required>
+                                            <div class="form-group has-error">
+                                                <label class="control-label" for="ConsultationFormName">Name *</label>
+                                               <input type="text" class="form-control" name="data[ConsultationForm][name]" id="ConsultationFormName" placeholder="Enter name" required data-validation-required-message>
                                             </div>
-                                            <div class="form-group">
-                                                <label for="ConsultationFormEmailAddress">Email *</label>
-                                                <input type="text" class="form-control" name="data[ConsultationForm][email_address]" type="email" id="ConsultationFormEmailAddress" placeholder="Enter email address" required>
+                                            <div class="form-group has-error">
+                                                <label class="control-label" for="ConsultationFormEmailAddress">Email *</label>
+                                                <input type="text" class="form-control" name="data[ConsultationForm][email_address]" type="email" id="ConsultationFormEmailAddress" placeholder="Enter email address" required data-validation-required-message>
                                             </div>
                                             <div class="form-group">
                                                 <label for="ConsultationFormPhoneNumber">Phone Number</label>
