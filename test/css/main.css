@@ -728,7 +728,8 @@ nav {
     .social-wrapper .social a {
       cursor: pointer; }
       .social-wrapper .social a img {
-        width: 65px; }
+        width: 50px;
+        margin: 5px; }
 
 /*Media Queries */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
