@@ -89,35 +89,34 @@ $('#openTermsContent').on('click', function () {
 });
 
 // Send contact form
+$(function() {
 
-$('#consultation-form').submit(function(event) {
-
-    $("input,textarea").jqBootstrapValidation({
-        preventSubmit: true,
-        submitError: function (errors) {
-            // submit error
-            $('#consultation-notification').html("<div class='alert alert-danger' role='alert'>Whoops...you forgot some information. Please complete required fields.</div>");
-        },
-        submitSuccess: function($form, event) {
-            event.preventDefault(); // prevent default submit behaviour
-            $.ajax({
-                url: "/forms/consultation/",
-                method: 'post',
-                data: $form.serialize(),
-                cache: true,
-                success: function() {
-                    // Success message
-                    $('#consultation-notification').html("<div class='alert alert-success' role='alert'>Sent Successfully!!</div>");
-                    //clear all fields
-                    $('#consultation-form').trigger("reset");
-                },
-                error: function() {
-                    // Fail message
-                    $('#consultation-notification').html("<div class='alert alert-danger' role='alert'>Oh no, something went wrong! Try again later.</div>");
-                },
-            })
-        },
-    });
-    return false
-})
+  $("input,textarea").jqBootstrapValidation({
+      preventSubmit: true,
+      submitError: function (errors) {
+          // submit error
+          $('#consultation-notification').html("<div class='alert alert-danger' role='alert'>Whoops...you forgot some information. Please complete required fields.</div>");
+      },
+      submitSuccess: function($form, event) {
+          event.preventDefault(); // prevent default submit behaviour
+          $.ajax({
+              url: "http://old.jbafinancialadvisors.com/forms/consultation/",
+              method: 'post',
+              data: $form.serialize(),
+              cache: true,
+              success: function() {
+                  // Success message
+                  $('#consultation-notification').html("<div class='alert alert-success' role='alert'>Sent Successfully!!</div>");
+                  //clear all fields
+                  $('#consultation-form').trigger("reset");
+              },
+              error: function() {
+                  // Fail message
+                  $('#consultation-notification').html("<div class='alert alert-danger' role='alert'>Oh no, something went wrong! Try again later.</div>");
+              },
+          })
+      },
+  });
+      return false
+});
 
