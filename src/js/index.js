@@ -1,5 +1,5 @@
 $('a[href*=#]:not([href=#])').click(function() {
- 
+
   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
     var target = $(this.hash);
     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -25,13 +25,13 @@ $("#slider").owlCarousel({
 });
 
 
-// Individual collapse blurbs 
+// Individual collapse blurbs
 
 var expandAccordion = function(e) {
   $('#plus-' + e.data.index).toggleClass('rotate-open');
   $('.accordian-content-' + e.data.index).collapse('toggle');
 };
- 
+
 for (var i = 1; i <= 4; i++) {
   $('#ind-' + i).click({ index: i }, expandAccordion);
   $('#plus-' + i).click({ index: i }, expandAccordion);
@@ -43,7 +43,7 @@ var expandAccordion = function(e) {
   $('#plus-' + e.data.index).toggleClass('rotate-open');
   $('.accordian-content-' + e.data.index).collapse('toggle');
 };
- 
+
 for (var i = 5; i <= 6; i++) {
   $('#bus-' + (i - 4)).click({ index: i }, expandAccordion);
   $('#plus-' + i).click({ index: i }, expandAccordion);
@@ -57,7 +57,7 @@ var expandWhy = function(e) {
   $('#plus-why-' + e.data.index).toggleClass('rotate-open');
   $('#why-content-' + e.data.index).collapse('toggle');
 };
- 
+
 for (var i = 1; i <=8; i++) {
   $('#why-' + i).click({ index: i }, expandWhy);
   $('#plus-why-' + i).click({ index: i }, expandWhy);
