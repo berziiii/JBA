@@ -752,6 +752,29 @@ nav {
         width: 50px;
         margin: 5px; }
 
+.video-link-container {
+  margin-top: 25px;
+}
+.video-library-link, .video-library-back {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border: 2px solid #fff;
+  font-size: 1.25em;
+  cursor: pointer;
+}
+
+.video-library-link:hover, .video-library-back:hover {
+  text-decoration: none;
+  color: #000;
+  background-color: #fff;
+}
+
+#populateList {
+  margin-top: 125px;
+  text-align: center;
+  height: 100vh;
+}
 /*Media Queries */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* medium */

@@ -50,6 +50,7 @@ module.exports = function(grunt) {
               },
               files: {                                   // Dictionary of files
                 'dist/index.html': 'src/index.html',     // 'destination': 'source'
+                'dist/video-library.html': 'src/video-library.html',
               }
             }
         },
@@ -70,8 +71,8 @@ module.exports = function(grunt) {
                     ],
                     dest: 'dist'
                     }],
-                verbose: true 
-            } 
+                verbose: true
+            }
         },
         //- Notify when task is complete
         notify: {
