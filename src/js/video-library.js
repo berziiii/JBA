@@ -1,26 +1,25 @@
 var html = '';
 var links = [
-  {title: 'Money Matrix', category: 'Wealth &amp; Wisdom', url: 'lqxkubtzoy'},
-  {title: 'Transfers Of Wealth', category: 'Wealth &amp; Wisdom', url: 'a7jlsggdiv'},
-  // {Title: ' Ski Coach.'},
-  // {Title: ' Longboarder.'},
-  // {Title: ' Problem-Solver.'},
-  // {Title: ' Baltimorean.'},
-  // {Title: ' Do-It-Yourselfer.'},
-  // {Title: ' Innovator.'},
-  // {Title: ' Technologist.'}
+  {title: '10 Minute Lesson', url: 'uim44zntlu'},
+  {title: 'Circle of Wealth', url: 'i2x2ips551'},
+  {title: 'Club vs. Swing', url: 'wq48jv72s5'},
+  {title: 'College Funding', url: 'bj920wsa5t'},
+  {title: 'Mortgages', url: 'fjhrzpjurr'},
+  {title: 'Personal Economic Model', url: '22syy9k6gt'},
+  {title: 'Private Reserve Strategy', url: '5xq1lrkpld'},
+  {title: 'Qualified Plans', url: 'jhlkjcr8ps'},
+  {title: 'Retirement Are You Ready?', url: '74qkronge4'},
+  {title: 'Your Bank', url: 'cp1fxpwqr4'},
   ];
 
 function populateVideoList(link) {
 
   var ret = '';
 
-  ret += '<div class="col-lg-6 col-md-6 col-sm-6 video-wrapper">';
+  ret += '<div class="col-lg-6 col-md-6 col-sm-6 video-wrapper video-library-container">';
   ret += '<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>';
-  ret += '<h3>' + link.title + '</h3>';
-  ret += '<h4>' + link.category + '</h4>';
+  ret += '<h2>' + link.title + '</h2>';
   ret += '<div class="wistia_embed wistia_async_' + link.url + '" style="height:320px;max-width:426px;margin:0px auto">&nbsp;</div>';
-  ret += '<div class="video-link-container"><a class="video-library-back" href="index.html">Go Back</a></div>';
   ret += '</div>';
 
   return ret;

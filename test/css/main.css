@@ -730,9 +730,22 @@ nav {
         width: 50px;
         margin: 5px; }
 
+.video-library-title {
+  margin-top: 125px;
+  text-decoration: underline;
+  text-align: center;
+}
+
 .video-link-container {
   margin-top: 25px;
+  margin-bottom: 100px;
+  text-align: center;
 }
+
+.video-library-back {
+  margin-bottom: 100px;
+}
+
 .video-library-link, .video-library-back {
   text-decoration: none;
   color: #fff;
@@ -749,9 +762,18 @@ nav {
 }
 
 #populateList {
-  margin-top: 125px;
-  text-align: center;
-  height: 100vh;
+  margin-top: 25px;
+  text-align: center
+  /*height: 100vh;*/
+}
+
+.video-library-container {
+  padding: 25px 0px 40px 0px;
+  border-bottom: 2px solid #fff;
+}
+
+.video-link-container-mobile {
+  display: none;
 }
 /*Media Queries */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -951,7 +973,11 @@ nav {
       padding: 5px; }
     .contact .social-wrapper img {
       width: 75px;
-      padding-bottom: 15px; } }
+      padding-bottom: 15px; }
+    .video-link-container-mobile {
+      display: block;
+      text-align: center;
+      margin: 40px 0px -10px; }}
 @media (max-width: 450px) {
   nav .login-menu {
     font-size: 6pt;
