@@ -8,7 +8,7 @@ var links = [
   {title: 'Personal Economic Model', url: '22syy9k6gt'},
   {title: 'Private Reserve Strategy', url: '5xq1lrkpld'},
   {title: 'Qualified Plans', url: 'jhlkjcr8ps'},
-  {title: 'Retirement Are You Ready?', url: '74qkronge4'},
+  {title: 'Ready for Retirement?', url: '74qkronge4'},
   {title: 'Your Bank', url: 'cp1fxpwqr4'},
   ];
 
@@ -18,7 +18,7 @@ function populateVideoList(link) {
 
   ret += '<div class="col-lg-6 col-md-6 col-sm-6 video-wrapper video-library-container">';
   ret += '<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>';
-  ret += '<h2>' + link.title + '</h2>';
+  ret += '<h3>' + link.title + '</h3>';
   ret += '<div class="wistia_embed wistia_async_' + link.url + '" style="height:320px;max-width:426px;margin:0px auto">&nbsp;</div>';
   ret += '</div>';
 
