@@ -17,7 +17,7 @@ function populateVideoList(link) {
   var ret = '';
 
   ret += '<div class="col-lg-6 col-md-6 col-sm-6 video-wrapper video-library-container">';
-  ret += '<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>';
+  ret += '<script charset="ISO-8859-1" src="https://fast.wistia.com/assets/external/E-v1.js" async></script>';
   ret += '<h3>' + link.title + '</h3>';
   ret += '<div class="wistia_embed wistia_async_' + link.url + '" style="height:320px;max-width:426px;margin:0px auto">&nbsp;</div>';
   ret += '</div>';
