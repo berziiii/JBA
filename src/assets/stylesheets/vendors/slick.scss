@@ -1,0 +1,12 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.slick-dots li.slick-active button:before {
+  color: var(--primaryColor-200);
+}
+
+.slick-dots li button:before {
+  font-size: 20px;
+  color: var(--mainLight);
+  opacity: 1;
+}

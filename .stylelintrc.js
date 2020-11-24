@@ -1,0 +1,23 @@
+module.exports = {
+    extends: ["stylelint-config-recommended-scss", "stylelint-a11y/recommended"],
+    plugins: ["stylelint-prettier"],
+    rules: {
+        "prettier/prettier": null,
+
+        "block-no-empty": null,
+        "declaration-block-no-duplicate-properties": null,
+        "font-family-no-missing-generic-family-keyword": null,
+        indentation: null,
+        "max-empty-lines": 1,
+        "no-descending-specificity": null,
+        "no-duplicate-selectors": null,
+        "no-empty-source": null,
+        "selector-type-no-unknown": null,
+        "selector-pseudo-class-no-unknown": [
+            true,
+            {
+                ignorePseudoClasses: ["global"],
+            },
+        ],
+    },
+};

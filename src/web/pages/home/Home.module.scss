@@ -1,0 +1,89 @@
+.wrapper {
+  background-color: var(--mainLight);
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  box-shadow: var(--containerBoxShadow);
+}
+
+.heroWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  height: calc(100vh - 60px);
+  background: {
+    image: url("../../../assets/home/hero-image.png");
+    position: center;
+    size: cover;
+    repeat: no-repeat;
+  }
+}
+
+.heroMask {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 125px 0 0;
+}
+
+.heroTitle {
+  color: var(--whiteColor);
+  font-size: 75px;
+  max-width: 80%;
+  margin: 50px auto;
+}
+
+.videoCtaContainer {
+  width: auto;
+  height: auto;
+  background: transparent;
+}
+
+.playIcon {
+  color: white;
+  svg {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.sliderContainer {
+  width: 60%;
+  max-width: 1000px;
+  margin: 50px auto;
+  height: 200px;
+  background-color: rgba(0,0,0,.8);
+}
+//.sliderCard {
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  width: 100%;
+//  padding-top: 50px;
+//  height: 150px;
+//  color: var(--mainLight);
+//}
+//
+
+.videoModal {
+  width: 600px !important;
+  height: auto;
+
+  @media (max-width: 768px) {
+    width: 90% !important;
+  }
+}
+
+.videoContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin: 50px auto 10px;
+  background-color: var(--secondaryColorDark);
+}
