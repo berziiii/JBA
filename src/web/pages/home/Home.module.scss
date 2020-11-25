@@ -71,7 +71,7 @@
 //
 
 .videoModal {
-  width: 600px !important;
+  width: 800px !important;
   height: auto;
 
   @media (max-width: 768px) {
@@ -86,4 +86,19 @@
   height: auto;
   margin: 50px auto 10px;
   background-color: var(--secondaryColorDark);
+}
+
+.containerWrapper {
+  width: 100%;
+  height: 1000px;
+}
+
+.modalClose {
+  width: auto;
+  height: auto;
+}
+
+.closeIcon {
+  width: 15px;
+  height: 15px;
 }

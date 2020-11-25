@@ -54,20 +54,17 @@
 }
 
 .menuItem {
-  button {
-    background: transparent;
+  color: var(--blackColor);
+  font: {
+    family: "Lato";
+    size: 16px;
+    width: 900;
   }
-
-  a {
-    background: transparent;
-    &:hover, &:focus, &:active {
-      color: var(--blackColor) !important;
-    }
-  }
+  padding: 0 15px 15px;
 
   &:hover, &:focus, &:active {
-     background: transparent;
-     border-bottom: 2px solid var(--primaryColor-100) !important;
+    color: var(--primaryColor-100);
+    border-bottom: 2px solid var(--primaryColor-100);
   }
 }
 
@@ -91,3 +88,97 @@
   width: 100%;
   padding: 10px 0 10px 75px !important;
 }
+
+.menuButton {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drawerCloseContainer {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px;
+  background: var(--whiteColor);
+}
+
+.drawerClose {
+  width: auto;
+  height: auto;
+  display: flex;
+}
+
+.closeIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.menuIcon {
+  font-size: 25px;
+}
+
+.drawerPanel {
+  .ant-drawer-body {
+
+  }
+}
+
+.drawerMenuList {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.drawerTitle {
+  border-top: 1px solid rgba(0,0,0,.3);
+  border-bottom: 1px solid rgba(0,0,0,.3);
+  padding: 20px 0 20px 25px;
+  width: 100%;
+  color: var(--blackColor);
+  font: {
+    family: "Lato";
+    size: 16px;
+    width: 900;
+  }
+}
+
+.drawerItem {
+  padding: 20px 0 20px 25px;
+  color: var(--blackColor);
+  width: 100%;
+  font: {
+    family: "Lato";
+    size: 16px;
+    width: 900;
+  }
+  border-bottom: 1px solid rgba(0,0,0,.3);
+
+  &:hover, &:focus, &:active {
+    color: var(--primaryColor-100);
+  }
+}
+
+.drawerNestedItem {
+  padding: 20px 0 20px 50px;
+  width: 100%;
+  color: var(--blackColor);
+  font: {
+    family: "Lato";
+    size: 16px;
+    width: 900;
+  }
+  border-bottom: 1px solid rgba(0,0,0,.3);
+
+  &:hover, &:focus, &:active {
+    color: var(--primaryColor-100);
+  }
+}
+

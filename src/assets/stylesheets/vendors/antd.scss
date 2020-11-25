@@ -1,1 +1,19 @@
 @import '~antd/dist/antd.css';
+
+.ant-menu-item-selected {
+  color: var(--primaryColor-100) !important;
+  border-bottom: 2px solid transparent !important;
+}
+
+.ant-drawer-body {
+  padding: 0px;
+}
+
+.ant-drawer-close {
+  display: none;
+}
+
+.ant-divider-horizontal {
+  margin: 10px 0;
+  border-top: 1px solid rgba(0,0,0,.3);
+}

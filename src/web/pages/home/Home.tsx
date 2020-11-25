@@ -1,11 +1,14 @@
 import React from "react";
 // import Slider from "react-slick";
+import {Observer} from "mobx-react";
 import {Modal} from "antd";
 import {PlayCircleFilled} from "@ant-design/icons";
 import {BaseComponent} from "../../components/BaseComponent";
 import {HomeProps, HomeState} from "./HomeInterface";
+import {AppMode} from "../../../web/utils/Constants";
 
 import styles from "./Home.module.scss";
+import close from "assets/home/close.svg";
 
 export class Home<P extends HomeProps = HomeProps, S extends HomeState = HomeState> extends BaseComponent {
   state: HomeState = {
@@ -16,14 +19,19 @@ export class Home<P extends HomeProps = HomeProps, S extends HomeState = HomeSta
     super(props);
   }
 
-  // videoResize = () => {
-  //   window.addEventListener("resize", () => {
-  //     const windowWidth = window.innerWidth;
-  //     const width = windowWidth - 400;
-  //     const smallWidth = windowWidth - 100;
-  //     this.setState({videoWidth: windowWidth < 768 ? smallWidth : width, videoHeight: windowWidth < 768 ? smallWidth / 1.75 : width / 1.75});
-  //   });
-  // };
+  componentDidMount() {
+    this.navigateToHash();
+  }
+
+  navigateToHash = () => {
+    setTimeout(() => {
+      const id = window.location.hash.split("#")[1];
+      if (id) {
+        const element = document.getElementById(id);
+        if (element) window.scrollTo(0, element.offsetTop - 60);
+      }
+    }, 250);
+  };
 
   // slider = () => {
   //   const settings = {
@@ -70,12 +78,26 @@ export class Home<P extends HomeProps = HomeProps, S extends HomeState = HomeSta
   };
 
   videoModal = () => {
-    const {state} = this;
-
+    const {state, appStore} = this;
+    const closeIcon = (
+      <div className={styles.modalClose} role={"button"} tabIndex={0} onClick={this.handleCloseVideoModal} onKeyPress={e => this.handleOnEnter(e, this.handleCloseVideoModal)}>
+        <img src={close} className={styles.closeIcon} />
+      </div>
+    );
     return (
-      <Modal className={styles.videoModal} maskClosable={false} visible={state.videoModalVisible} footer={null} onCancel={this.handleCloseVideoModal}>
+      <Modal className={styles.videoModal} maskClosable={false} closeIcon={closeIcon} visible={state.videoModalVisible} footer={null} onCancel={this.handleCloseVideoModal}>
         <div className={styles.videoContainer}>
-          <iframe src="https://player.vimeo.com/video/369838909" id={"videoPlayer"} title={"Retirement Savings Dilemma"} allow="fullscreen" allowFullScreen frameBorder="0" width={600} height={350} scrolling="no" />
+          <iframe
+            src="https://player.vimeo.com/video/369838909"
+            id={"videoPlayer"}
+            title={"Retirement Savings Dilemma"}
+            allow="fullscreen"
+            allowFullScreen
+            frameBorder="0"
+            width={appStore.state.mode === AppMode.Desktop ? 700 : 450}
+            height={appStore.state.mode === AppMode.Desktop ? 400 : 225}
+            scrolling="no"
+          />
         </div>
       </Modal>
     );
@@ -83,23 +105,33 @@ export class Home<P extends HomeProps = HomeProps, S extends HomeState = HomeSta
 
   render() {
     return (
-      <div className={styles.wrapper}>
-        <div className={styles.heroWrapper}>
-          <div className={styles.heroMask}>
-            <h1 className={styles.heroTitle}>Start Building Your Guaranteed Pension Today!</h1>
-            <button className={styles.videoCtaContainer} onClick={this.handleOpenVideoModal}>
-              <PlayCircleFilled className={styles.playIcon} />
-            </button>
+      <Observer>
+        {() => (
+          <div className={styles.wrapper}>
+            <div className={styles.heroWrapper}>
+              <div className={styles.heroMask}>
+                <h1 className={styles.heroTitle}>Start Building Your Guaranteed Pension Today!</h1>
+                <button className={styles.videoCtaContainer} onClick={this.handleOpenVideoModal}>
+                  <PlayCircleFilled className={styles.playIcon} />
+                </button>
+              </div>
+            </div>
+            <div id={"what-we-do"} className={styles.containerWrapper}>
+              <h2>What We Do</h2>
+            </div>
+            <div id={"who-we-are"} className={styles.containerWrapper}>
+              <h2>Who We Are</h2>
+            </div>
+            <div id={"why-choose-us"} className={styles.containerWrapper}>
+              <h2>Why Choose Us?</h2>
+            </div>
+            <div id={"contact-us"} className={styles.containerWrapper}>
+              <h2>Contact Us</h2>
+            </div>
+            {this.videoModal()}
           </div>
-        </div>
-        {this.videoModal()}
-
-        {/*<div className={styles.videoContainer}>*/}
-        {/*  <iframe src="https://player.vimeo.com/video/369838909" title={"Retirement Savings Dilemma"} allow="fullscreen" allowFullScreen frameBorder="0" width={this.state.videoWidth} height={this.state.videoHeight} scrolling="no" />*/}
-        {/*</div>*/}
-
-        {/*{this.slider()}*/}
-      </div>
+        )}
+      </Observer>
     );
   }
 }

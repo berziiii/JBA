@@ -1,6 +1,3 @@
 export interface HeaderProps {}
 
-export interface HeaderState {
-  drawerPanelOpen: boolean;
-  loginOpen: boolean;
-}
+export interface HeaderState {}
