@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 75px;
+  padding: 5px 10px;
+  border-top: 1px solid var(--blackColor);
+  background-color: var(--whiteColor);
+  justify-content: center;
+  align-items: center;
+}
+
+.termsConditions {
+  text-decoration: underline;
+  &:hover, &:focus, &:active {
+    text-decoration: underline;
+    color: var(--primaryColor-100);
+  }
+}

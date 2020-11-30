@@ -6,3 +6,4 @@ export {TermsConditions} from "./pages/termsconditions/TermsConditions";
 
 // Components
 export {Header} from "./components/header/Header";
+export {Footer} from "./components/footer/Footer";

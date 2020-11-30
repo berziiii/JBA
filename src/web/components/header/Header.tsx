@@ -51,7 +51,7 @@ export class Header<P extends HeaderProps = HeaderProps, S extends HeaderState =
     const closeIcon = (
       <div className={styles.drawerCloseContainer}>
         <div className={styles.drawerClose} role={"button"} tabIndex={0} onClick={this.handleCloseDrawerPanel} onKeyPress={e => this.handleOnEnter(e, this.handleCloseDrawerPanel)}>
-          <img src={close} className={styles.closeIcon} />
+          <img src={close} className={styles.closeIcon} alt={"close icon"} />
         </div>
       </div>
     );
@@ -109,9 +109,6 @@ export class Header<P extends HeaderProps = HeaderProps, S extends HeaderState =
           <Link to={"/platform"} tabIndex={0} className={styles.drawerItem} onClick={this.handleCloseDrawerPanel} onKeyPress={e => this.handleOnEnter(e, this.handleCloseDrawerPanel)}>
             Advisory Platform
           </Link>
-          <Link to={"/terms-conditions"} tabIndex={0} className={styles.drawerItem} onClick={this.handleCloseDrawerPanel} onKeyPress={e => this.handleOnEnter(e, this.handleCloseDrawerPanel)}>
-            Terms & Conditions
-          </Link>
         </div>
       </Drawer>
     );
@@ -126,7 +123,7 @@ export class Header<P extends HeaderProps = HeaderProps, S extends HeaderState =
             <div className={styles.leftContent}>
               <div role="button" tabIndex={0} className={styles.logoContainer}>
                 <Link to={"/"} tabIndex={-1} className={styles.logoLink} onClick={this.scrollToSection} onKeyPress={e => this.handleOnEnter(e, this.scrollToSection)}>
-                  <img src={logo} className={styles.logo} />
+                  <img src={logo} className={styles.logo} alt={"jba logo"} />
                 </Link>
               </div>
               {appStore.state.mode === AppMode.Desktop && (
@@ -149,7 +146,7 @@ export class Header<P extends HeaderProps = HeaderProps, S extends HeaderState =
             <div className={styles.rightContent}>
               <div className={styles.headerMenuRightContainer}>
                 <div className={styles.menuButton} tabIndex={0} role={"button"} onClick={this.handleOpenDrawerPanel} onKeyPress={e => this.handleOnEnter(e, this.handleOpenDrawerPanel)}>
-                  <img src={menu} className={styles.menuIcon} />
+                  <img src={menu} className={styles.menuIcon} alt={"open menu"} />
                 </div>
               </div>
             </div>

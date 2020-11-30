@@ -7,6 +7,16 @@
 
 .slick-dots li button:before {
   font-size: 20px;
-  color: var(--mainLight);
+  color: var(--whiteColor);
   opacity: 1;
+}
+
+.slick-active {
+  button {
+    color: var(--primaryColor-100) !important;
+  }
+}
+
+.slick-arrow {
+  display: none !important;
 }

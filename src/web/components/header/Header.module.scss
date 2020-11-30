@@ -8,6 +8,7 @@
   right: 0;
   background-color: var(--whiteColor);
   box-shadow: var(--containerBoxShadow);
+  z-index: 10;
 }
 
 .leftContent {
@@ -18,7 +19,7 @@
 }
 
 .rightContent {
-  width: 100%;
+  width: auto;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -50,7 +51,7 @@
 
 .headerMenuRightContainer {
   background: transparent;
-  margin-right: 25px;
+  margin-right: 50px;
 }
 
 .menuItem {

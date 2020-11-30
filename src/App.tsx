@@ -42,9 +42,10 @@ export class App<P extends AppProps = AppProps, S extends AppState = AppState> e
                     <Route exact path={"/"} component={ComponentFactory.Home} />
                     <Route exact path={"/video-library"} component={ComponentFactory.VideoLibrary} />
                     <Route exact path={"/platform"} component={ComponentFactory.Platform} />
-                    <Route exact path={"/terms-conditions"} component={ComponentFactory.TermsConditions} />
+                    <Route exact path={"/terms-and-conditions"} component={ComponentFactory.TermsConditions} />
                   </Switch>
                 </div>
+                <ComponentFactory.Footer />
               </Router>
             </div>
           )}
