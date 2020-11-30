@@ -13,9 +13,25 @@
     ]
   ],
   "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "es",
+        "style": true
+      }
+    ],
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": false,
+        "regenerator": true,
+        "useESModules": true
+      }
+    ],
     ["@babel/plugin-proposal-decorators", { "legacy": true }],
     "@babel/plugin-syntax-dynamic-import",
     ["@babel/plugin-proposal-class-properties", { "loose": true }],
-    ["@babel/plugin-transform-react-jsx"]
+    "@babel/plugin-transform-react-jsx"
   ]
 }

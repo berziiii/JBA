@@ -35,7 +35,7 @@ export class App<P extends AppProps = AppProps, S extends AppState = AppState> e
         <Observer>
           {() => (
             <div className="main-container">
-              <Router>
+              <Router basename={"/react/"}>
                 <ComponentFactory.Header />
                 <div className={"main-wrapper"}>
                   <Switch>

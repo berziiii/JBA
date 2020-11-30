@@ -30,7 +30,7 @@
     "traceResolution": false,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "jsx": "react",
+    "jsx": "react"
   },
   "include": ["typings/**/*", "src/**/*"],
   "exclude": [".vscode", "build", "node_modules", "public", "scripts"],
