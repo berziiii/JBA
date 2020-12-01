@@ -21,10 +21,8 @@ export class Header<P extends HeaderProps = HeaderProps, S extends HeaderState =
   }
 
   scrollToSection = (e: any) => {
-    const {appStore} = this;
-    const isMobile = appStore.state.mode === AppMode.Mobile;
     const {hash} = e.target;
-    if (_.isNil(hash)) window.scrollTo({left: 0, top: 0, behavior: "smooth"});
+    if (_.isNil(hash) || hash === "") window.scrollTo(0, 0);
     else
       setTimeout(() => {
         const id = e.target.hash.split("#")[1];
@@ -32,7 +30,7 @@ export class Header<P extends HeaderProps = HeaderProps, S extends HeaderState =
         if (element) window.scrollTo({left: 0, top: element.offsetTop - 60, behavior: "smooth"});
       }, 0);
 
-    if (isMobile) this.handleCloseDrawerPanel();
+    this.handleCloseDrawerPanel();
   };
 
   handleOpenDrawerPanel = () => {
@@ -42,7 +40,6 @@ export class Header<P extends HeaderProps = HeaderProps, S extends HeaderState =
 
   handleCloseDrawerPanel = () => {
     const {appStore} = this;
-    window.scrollTo(0, 0);
     appStore.setDrawerPanelVisible(false);
   };
 
@@ -101,13 +98,13 @@ export class Header<P extends HeaderProps = HeaderProps, S extends HeaderState =
               </Link>
             </>
           )}
-          <Link to={"/platform"} tabIndex={0} className={styles.drawerItem} onClick={this.handleCloseDrawerPanel} onKeyPress={e => this.handleOnEnter(e, this.handleCloseDrawerPanel)}>
+          <Link to={"/platform"} tabIndex={0} className={styles.drawerItem} onClick={this.scrollToSection} onKeyPress={e => this.handleOnEnter(e, this.scrollToSection)}>
             Advisory Platform
           </Link>
-          <Link to={"/video-library"} tabIndex={0} className={styles.drawerItem} onClick={this.handleCloseDrawerPanel} onKeyPress={e => this.handleOnEnter(e, this.handleCloseDrawerPanel)}>
+          <Link to={"/video-library"} tabIndex={0} className={styles.drawerItem} onClick={this.scrollToSection} onKeyPress={e => this.handleOnEnter(e, this.scrollToSection)}>
             Video Library
           </Link>
-          {/*<a href={"http://blog.jbafinancialadvisors.com/"} target={"_blank"} tabIndex={0} className={styles.drawerItem} onClick={this.handleCloseDrawerPanel} onKeyPress={e => this.handleOnEnter(e, this.handleCloseDrawerPanel)}>*/}
+          {/*<a href={"http://blog.jbafinancialadvisors.com/"} target={"_blank"} tabIndex={0} className={styles.drawerItem} onClick={this.scrollToSection} onKeyPress={e => this.handleOnEnter(e, this.scrollToSection)}>*/}
           {/*  Blog*/}
           {/*</a>*/}
         </div>

@@ -13,6 +13,10 @@ export class Footer<P extends FooterProps = FooterProps, S extends FooterState =
     super(props);
   }
 
+  scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   render() {
     const year = new Date().getFullYear();
     return (
@@ -21,7 +25,7 @@ export class Footer<P extends FooterProps = FooterProps, S extends FooterState =
           <div className={styles.footer}>
             <p>JBA Financial Advisors</p>
             <p>Copyright © {year} - All rights reserved</p>
-            <Link to={"/terms-and-conditions"} className={styles.termsConditions}>
+            <Link to={"/terms-and-conditions"} className={styles.termsConditions} onClick={this.scrollToTop} onKeyPress={e => this.handleOnEnter(e, this.scrollToTop)}>
               Terms & Conditions
             </Link>
           </div>
