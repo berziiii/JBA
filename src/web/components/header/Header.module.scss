@@ -10,10 +10,11 @@
   background-color: var(--whiteColor);
   box-shadow: var(--containerBoxShadow);
   z-index: 10;
+}
 
-  @media (max-width: 768px) {
-    height: 45px;
-  }
+.headerWrapper {
+  width: 100%;
+  display: flex;
 }
 
 .leftContent {
@@ -34,7 +35,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 0 0 40px;
+  margin-left: 50px;
+
+  @media (max-width: 768px) {
+    margin-left: 15px;
+  }
 }
 
 .logoLink {
@@ -43,14 +48,10 @@
 }
 
 .logo {
-  width: 60px;
-  height: auto;
+  width: auto;
+  height: 55px;
   padding: 5px;
   border: 1px solid var(--blackColor);
-
-  @media (max-width: 768px) {
-    width: 40px;
-  }
 }
 
 .headerMenuLeftContainer {
@@ -61,6 +62,10 @@
 .headerMenuRightContainer {
   background: transparent;
   margin-right: 50px;
+
+  @media (max-width: 768px) {
+    margin-right: 15px;
+  }
 }
 
 .menuItem {

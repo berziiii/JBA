@@ -118,37 +118,39 @@ export class Header<P extends HeaderProps = HeaderProps, S extends HeaderState =
       <Observer>
         {() => (
           <header className={styles.header}>
-            <div className={styles.leftContent}>
-              <div role="button" tabIndex={0} className={styles.logoContainer}>
-                <Link to={"/"} tabIndex={-1} className={styles.logoLink} onClick={this.scrollToSection} onKeyPress={e => this.handleOnEnter(e, this.scrollToSection)}>
-                  <img src={logo} className={styles.logo} alt={"jba logo"} />
-                </Link>
-              </div>
-              {appStore.state.mode === AppMode.Desktop && (
-                <div className={styles.headerMenuLeftContainer}>
-                  <Link to={"/#what-we-do"} role={"button"} className={styles.menuItem} onClick={this.scrollToSection} onKeyPress={e => this.handleOnEnter(e, this.scrollToSection)}>
-                    What We Do
-                  </Link>
-                  <Link to={"/#who-we-are"} role={"button"} className={styles.menuItem} onClick={this.scrollToSection} onKeyPress={e => this.handleOnEnter(e, this.scrollToSection)}>
-                    Who We Are
-                  </Link>
-                  <Link to={"/#why-choose-us"} role={"button"} className={styles.menuItem} onClick={this.scrollToSection} onKeyPress={e => this.handleOnEnter(e, this.scrollToSection)}>
-                    Why Choose Us?
-                  </Link>
-                  <Link to={"/#contact-us"} role={"button"} className={styles.menuItem} onClick={this.scrollToSection} onKeyPress={e => this.handleOnEnter(e, this.scrollToSection)}>
-                    Contact Us
+            <div className={styles.headerWrapper}>
+              <div className={styles.leftContent}>
+                <div role="button" tabIndex={0} className={styles.logoContainer}>
+                  <Link to={"/"} tabIndex={-1} className={styles.logoLink} onClick={this.scrollToSection} onKeyPress={e => this.handleOnEnter(e, this.scrollToSection)}>
+                    <img src={logo} className={styles.logo} alt={"jba logo"} />
                   </Link>
                 </div>
-              )}
-            </div>
-            <div className={styles.rightContent}>
-              <div className={styles.headerMenuRightContainer}>
-                <div className={styles.menuButton} tabIndex={0} role={"button"} onClick={this.handleOpenDrawerPanel} onKeyPress={e => this.handleOnEnter(e, this.handleOpenDrawerPanel)}>
-                  <img src={menu} className={styles.menuIcon} alt={"open menu"} />
+                {appStore.state.mode === AppMode.Desktop && (
+                  <div className={styles.headerMenuLeftContainer}>
+                    <Link to={"/#what-we-do"} role={"button"} className={styles.menuItem} onClick={this.scrollToSection} onKeyPress={e => this.handleOnEnter(e, this.scrollToSection)}>
+                      What We Do
+                    </Link>
+                    <Link to={"/#who-we-are"} role={"button"} className={styles.menuItem} onClick={this.scrollToSection} onKeyPress={e => this.handleOnEnter(e, this.scrollToSection)}>
+                      Who We Are
+                    </Link>
+                    <Link to={"/#why-choose-us"} role={"button"} className={styles.menuItem} onClick={this.scrollToSection} onKeyPress={e => this.handleOnEnter(e, this.scrollToSection)}>
+                      Why Choose Us?
+                    </Link>
+                    <Link to={"/#contact-us"} role={"button"} className={styles.menuItem} onClick={this.scrollToSection} onKeyPress={e => this.handleOnEnter(e, this.scrollToSection)}>
+                      Contact Us
+                    </Link>
+                  </div>
+                )}
+              </div>
+              <div className={styles.rightContent}>
+                <div className={styles.headerMenuRightContainer}>
+                  <div className={styles.menuButton} tabIndex={0} role={"button"} onClick={this.handleOpenDrawerPanel} onKeyPress={e => this.handleOnEnter(e, this.handleOpenDrawerPanel)}>
+                    <img src={menu} className={styles.menuIcon} alt={"open menu"} />
+                  </div>
                 </div>
               </div>
+              {this.drawerPanel()}
             </div>
-            {this.drawerPanel()}
           </header>
         )}
       </Observer>

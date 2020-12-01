@@ -29,15 +29,17 @@ export class VideoLibrary<P extends VideoLibraryProps = VideoLibraryProps, S ext
     return (
       <Observer>
         {() => (
-          <div className={styles.videoContainer}>
-            <h1 className={styles.videoTitle}>Video Library</h1>
-            <div className={styles.videoWrapper}>
-              {this.links.map((link: Video) => (
-                <div className={styles.videoCard}>
-                  <h3 className={styles.title}>{link.title}</h3>
-                  <div className={`wistia_embed wistia_async_${link.url} ${styles.video}`}>&nbsp;</div>
-                </div>
-              ))}
+          <div className={styles.mainContainer}>
+            <div className={styles.mainWrapper}>
+              <h1 className={styles.videoTitle}>Video Library</h1>
+              <div className={styles.videoWrapper}>
+                {this.links.map((link: Video) => (
+                  <div className={styles.videoCard}>
+                    <h3 className={styles.title}>{link.title}</h3>
+                    <div className={`wistia_embed wistia_async_${link.url} ${styles.video}`}>&nbsp;</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         )}
