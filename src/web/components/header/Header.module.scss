@@ -4,11 +4,16 @@
   align-items: center;
   position: sticky;
   max-width: 100vw;
+  height: 60px;
   top: 0;
   right: 0;
   background-color: var(--whiteColor);
   box-shadow: var(--containerBoxShadow);
   z-index: 10;
+
+  @media (max-width: 768px) {
+    height: 45px;
+  }
 }
 
 .leftContent {
@@ -42,6 +47,10 @@
   height: auto;
   padding: 5px;
   border: 1px solid var(--blackColor);
+
+  @media (max-width: 768px) {
+    width: 40px;
+  }
 }
 
 .headerMenuLeftContainer {

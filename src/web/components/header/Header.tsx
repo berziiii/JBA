@@ -42,6 +42,7 @@ export class Header<P extends HeaderProps = HeaderProps, S extends HeaderState =
 
   handleCloseDrawerPanel = () => {
     const {appStore} = this;
+    window.scrollTo(0, 0);
     appStore.setDrawerPanelVisible(false);
   };
 
@@ -60,7 +61,7 @@ export class Header<P extends HeaderProps = HeaderProps, S extends HeaderState =
       <Drawer width={300} placement="right" visible={this.appStore.state.drawerPanelVisible} onClose={this.handleCloseDrawerPanel}>
         {closeIcon}
         <div className={styles.drawerMenuList}>
-          <p className={styles.drawerTitle}>Login</p>
+          <p className={styles.drawerTitle}>Account Logins</p>
           <a href={"https://www.netxinvestor.com/nxi/login"} target={"_blank"} tabIndex={0} className={styles.drawerNestedItem} onClick={this.handleCloseDrawerPanel} onKeyPress={e => this.handleOnEnter(e, this.handleCloseDrawerPanel)}>
             Investment Accounts
           </a>
@@ -82,7 +83,7 @@ export class Header<P extends HeaderProps = HeaderProps, S extends HeaderState =
             onClick={this.handleCloseDrawerPanel}
             onKeyPress={e => this.handleOnEnter(e, this.handleCloseDrawerPanel)}
           >
-            Financial Plans
+            Financial Plans Accounts
           </a>
           {isMobile && (
             <>
@@ -100,15 +101,15 @@ export class Header<P extends HeaderProps = HeaderProps, S extends HeaderState =
               </Link>
             </>
           )}
-          <Link to={"/video-library"} tabIndex={0} className={styles.drawerItem} onClick={this.handleCloseDrawerPanel} onKeyPress={e => this.handleOnEnter(e, this.handleCloseDrawerPanel)}>
-            Video Library
-          </Link>
-          <a href={"http://blog.jbafinancialadvisors.com/"} target={"_blank"} tabIndex={0} className={styles.drawerItem} onClick={this.handleCloseDrawerPanel} onKeyPress={e => this.handleOnEnter(e, this.handleCloseDrawerPanel)}>
-            Blog
-          </a>
           <Link to={"/platform"} tabIndex={0} className={styles.drawerItem} onClick={this.handleCloseDrawerPanel} onKeyPress={e => this.handleOnEnter(e, this.handleCloseDrawerPanel)}>
             Advisory Platform
           </Link>
+          <Link to={"/video-library"} tabIndex={0} className={styles.drawerItem} onClick={this.handleCloseDrawerPanel} onKeyPress={e => this.handleOnEnter(e, this.handleCloseDrawerPanel)}>
+            Video Library
+          </Link>
+          {/*<a href={"http://blog.jbafinancialadvisors.com/"} target={"_blank"} tabIndex={0} className={styles.drawerItem} onClick={this.handleCloseDrawerPanel} onKeyPress={e => this.handleOnEnter(e, this.handleCloseDrawerPanel)}>*/}
+          {/*  Blog*/}
+          {/*</a>*/}
         </div>
       </Drawer>
     );

@@ -19,6 +19,10 @@
     size: cover;
     repeat: no-repeat;
   }
+
+  @media (max-width: 768px) {
+    height: calc(100vh - 45px);
+  }
 }
 
 .heroMask {
