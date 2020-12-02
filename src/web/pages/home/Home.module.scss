@@ -29,6 +29,10 @@
   flex-direction: column;
   align-items: center;
   padding: 125px 0 0;
+
+  @media (max-width: 768px) {
+    padding: 75px 0 0;
+  }
 }
 
 .heroTitle {
@@ -37,13 +41,13 @@
   max-width: 80%;
   margin: 50px auto;
 
-
   @media (max-width: 1200px) {
     width: 95%;
   }
 
   @media (max-width: 768px) {
     font-size: 40px;
+    margin: 20px auto 40px;
   }
 }
 
