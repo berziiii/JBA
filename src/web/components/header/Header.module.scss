@@ -1,0 +1,208 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  max-width: 100vw;
+  height: 60px;
+  top: 0;
+  right: 0;
+  background-color: var(--whiteColor);
+  box-shadow: var(--containerBoxShadow);
+  z-index: 10;
+}
+
+.headerWrapper {
+  width: 100%;
+  display: flex;
+}
+
+.leftContent {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.rightContent {
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+
+  @media (max-width: 768px) {
+    margin-left: 15px;
+  }
+}
+
+.logoLink {
+  display: flex;
+  margin: 2px;
+}
+
+.logo {
+  width: auto;
+  height: 55px;
+  padding: 5px;
+  border: 1px solid var(--blackColor);
+}
+
+.headerMenuLeftContainer {
+  background: transparent;
+  margin-left: 25px;
+}
+
+.headerMenuRightContainer {
+  background: transparent;
+  margin-right: 50px;
+
+  @media (max-width: 768px) {
+    margin-right: 15px;
+  }
+}
+
+.menuItem {
+  color: var(--blackColor);
+  font: {
+    family: var(--fontFamily);
+    size: 16px;
+    weight: 900;
+  }
+  padding: 0 15px 15px;
+
+  &:hover, &:focus, &:active {
+    color: var(--primaryColor-100);
+    border-bottom: 2px solid var(--primaryColor-100);
+    cursor: pointer;
+  }
+}
+
+.navigationContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 40px 0 0;
+}
+
+.drawerList {
+  min-width: 400px;
+}
+
+.listItem {
+  padding: 0 0 0 75px;
+}
+
+.nestedItem {
+  width: 100%;
+  padding: 10px 0 10px 75px !important;
+}
+
+.menuButton {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drawerCloseContainer {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px;
+  background: var(--whiteColor);
+}
+
+.drawerClose {
+  width: auto;
+  height: auto;
+  display: flex;
+}
+
+.closeIcon {
+  width: 20px;
+  height: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.menuIcon {
+  font-size: 25px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.drawerPanel {
+  .ant-drawer-body {
+
+  }
+}
+
+.drawerMenuList {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.drawerTitle {
+  border-top: 1px solid rgba(0,0,0,.3);
+  border-bottom: 1px solid rgba(0,0,0,.3);
+  padding: 20px 0 20px 25px;
+  width: 100%;
+  color: var(--blackColor);
+  font: {
+    family: var(--fontFamily);
+    size: 16px;
+    weight: 900;
+  }
+}
+
+.drawerItem {
+  padding: 20px 0 20px 25px;
+  color: var(--blackColor);
+  width: 100%;
+  font: {
+    family: var(--fontFamily);
+    size: 16px;
+    weight: 900;
+  }
+  border-bottom: 1px solid rgba(0,0,0,.3);
+
+  &:hover, &:focus, &:active {
+    color: var(--primaryColor-100);
+  }
+}
+
+.drawerNestedItem {
+  padding: 20px 0 20px 50px;
+  width: 100%;
+  color: var(--blackColor);
+  font: {
+    family: var(--fontFamily);
+    size: 16px;
+    weight: 900;
+  }
+  border-bottom: 1px solid rgba(0,0,0,.3);
+
+  &:hover, &:focus, &:active {
+    color: var(--primaryColor-100);
+  }
+}
+
