@@ -1,21 +1,38 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
-import { Modal } from 'antd';
-import { PlayCircleFilled, HomeFilled, MailFilled, PhoneFilled, ContactsFilled } from '@ant-design/icons';
+import { Input, Modal } from 'antd';
+import { PlayCircleFilled, HomeFilled, ContactsFilled } from '@ant-design/icons';
 import { observer } from 'mobx-react-lite';
 import close from 'assets/home/close.svg';
+import TextArea from 'antd/lib/input/TextArea';
 import { AppMode } from '../../utils/Constants';
 import { handleOnEnter } from '../../utils/WebHelper';
 import { useAppStore } from '../../providers/StoresProvider';
+import { AppConfig } from '../../../core/AppConfig';
 
 import styles from './Home.module.scss';
 
 const resumePicture = require('assets/home/resume.jpg');
 
+interface ContactFormInterface {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
+
+const initialFormData: ContactFormInterface = {
+  name: '',
+  email: '',
+  phone: '',
+  message: '',
+};
+
 const Home = observer(() => {
   const appStore = useAppStore();
   const [resumeModalVisible, setResumeModalVisible] = useState<boolean>(false);
   const [videoModalVisible, setVideoModalVisible] = useState<boolean>(false);
+  const [formData, setFormData] = useState<ContactFormInterface>(initialFormData);
 
   const handleResumeClose = () => {
     setResumeModalVisible(false);
@@ -23,6 +40,22 @@ const Home = observer(() => {
 
   const handleResumeOpen = () => {
     setResumeModalVisible(true);
+  };
+
+  const handleOnChange = (e: any) => {
+    const newData = {
+      ...formData,
+      [e.target.name]: e.target.value,
+    };
+
+    setFormData(newData);
+  };
+
+  const handleFormSubmit = (e: any) => {
+    e.preventDefault();
+    console.log(formData);
+
+    setFormData(initialFormData);
   };
 
   const slider = () => {
@@ -507,8 +540,60 @@ const Home = observer(() => {
         <div className={styles.mainWrapper}>
           <h2 className={styles.containerTitle}>Contact Us</h2>
           <div className={styles.contentContainer}>
+            {AppConfig.pages.Home.contactForm.enabled && (
+              <div className={styles.contactFormContainer}>
+                <form onSubmit={handleFormSubmit} className={styles.form}>
+                  <div className={styles.inputContainer}>
+                    <Input
+                      className={styles.input}
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      placeholder="Name"
+                      onChange={handleOnChange}
+                    />
+                  </div>
+                  <div className={styles.inputContainer}>
+                    <Input
+                      className={styles.input}
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      placeholder="Email Address"
+                      onChange={handleOnChange}
+                    />
+                  </div>
+                  <div className={styles.inputContainer}>
+                    <Input
+                      className={styles.input}
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      placeholder="Phone Number"
+                      onChange={handleOnChange}
+                    />
+                  </div>
+                  <div className={styles.inputContainer}>
+                    <TextArea
+                      className={styles.input}
+                      rows={6}
+                      name="message"
+                      value={formData.message}
+                      placeholder="Message"
+                      onChange={handleOnChange}
+                    />
+                  </div>
+                  <button className={styles.submit} type="submit" onClick={handleFormSubmit}>
+                    Submit
+                  </button>
+                </form>
+              </div>
+            )}
             <div className={styles.contentWrapper}>
-              <div className={styles.contactContainer}>
+              <div
+                className={`${styles.contactContainer} ${
+                  AppConfig.pages.Home.contactForm.enabled ? styles.divider : ''
+                }`}>
                 <div className={styles.location}>
                   <HomeFilled />
                   <p>30 E. Padonia Road</p>
@@ -516,17 +601,11 @@ const Home = observer(() => {
                   <p>Timonium, MD 21093</p>
                 </div>
                 <div className={styles.address}>
-                  <MailFilled />
+                  <ContactsFilled />
                   <p>JBA Financial Advisors</p>
                   <p>P.O. Box 6146</p>
                   <p>Timonium, MD 21094</p>
-                </div>
-                <div className={styles.phone}>
-                  <PhoneFilled />
                   <a href="tel:410-584-1491">410.584.1491</a>
-                </div>
-                <div className={styles.inbox}>
-                  <ContactsFilled />
                   <a href="mailto:john@jbafinancialadvisors.com">john@jbafinancialadvisors.com</a>
                 </div>
               </div>

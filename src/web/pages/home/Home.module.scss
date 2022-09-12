@@ -453,7 +453,7 @@
     width: 95%;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     width: 100%;
   }
 }
@@ -474,7 +474,7 @@
     width: 95%;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
     margin: 0 auto;
@@ -659,33 +659,38 @@
   display: flex;
 }
 
+.divider {
+  border-top: 1px solid var(--neutralColor-400);
+}
+
 .contactContainer {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
-  margin: 0 auto;
+  margin: 20px auto 0;
   width: 80%;
 
   @media (max-width: 1200px) {
     width: 95%;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
 
-.location, .address, .phone, .inbox {
+.location, .address {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
 
   svg {
     color: var(--primaryColor-200);
+    align-self: center;
     width: 30px;
     height: 30px;
     margin: 15px auto;
@@ -702,6 +707,54 @@
 
     @media (max-width: 768px) {
       font-size: 14px;
+    }
+  }
+}
+
+.contactFormContainer {
+  height: auto;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    max-width: 90%;
+  }
+
+  .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 768px) {
+      margin-top: 16px;
+    }
+
+    .inputContainer {
+      width: 100%;
+      margin-bottom: 8px;
+      display: flex;
+      flex-direction: column;
+
+      .input {
+        width: 100%;
+        font-family: var(--fontFamily);
+      }
+    }
+
+    .submit {
+      width: 80%;
+      align-self: center;
+      background-color: var(--primaryColor-100);
+      color: var(--blackColor);
+      font-family: var(--fontFamily);
+      font-size: 16px;
+      padding: 8px 16px;
+      border-radius: 4px;
+      margin-top: 8px;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
