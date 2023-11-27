@@ -103,7 +103,7 @@ const Platform = observer(() => {
               </p>
             </div>
             <div className={styles.card}>
-              <a href="https://www.morningstar.com/" target="_blank" className={styles.cardTitle}>
+              <a href="https://investor.morningstar.com" target="_blank" className={styles.cardTitle}>
                 Morningstar Investment Services
               </a>
               <img src={morningstar} alt="Morningstar Investment Services" className={styles.cardImage} />
