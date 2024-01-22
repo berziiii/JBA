@@ -10,16 +10,16 @@ interface Video {
 
 const VideoLibrary = observer(() => {
   const links: Video[] = [
-    { title: '10 Minute Lesson', url: 'uim44zntlu' },
-    { title: 'Circle of Wealth', url: 'i2x2ips551' },
-    { title: 'Club vs. Swing', url: 'wq48jv72s5' },
-    { title: 'College Funding', url: 'bj920wsa5t' },
-    { title: 'Mortgages', url: 'fjhrzpjurr' },
-    { title: 'Personal Economic Model', url: '22syy9k6gt' },
-    { title: 'Private Reserve Strategy', url: '5xq1lrkpld' },
-    { title: 'Qualified Plans', url: 'jhlkjcr8ps' },
-    { title: 'Ready for Retirement?', url: '74qkronge4' },
-    { title: 'Your Bank', url: 'cp1fxpwqr4' },
+    { title: '10 Minute Lesson', url: 'zflece' },
+    { title: 'Circle of Wealth', url: 'u7zoel' },
+    { title: 'Club vs. Swing', url: 'zs8kom' },
+    { title: 'College Funding', url: 'x93lh0' },
+    { title: 'Mortgages', url: 'vggjr0' },
+    { title: 'Personal Economic Model', url: 'npwiqn' },
+    { title: 'Private Reserve Strategy', url: 'h0lzyl' },
+    { title: 'Qualified Plans', url: '8jvwhh' },
+    { title: 'Ready for Retirement?', url: '4uefr1' },
+    { title: 'Your Bank', url: 'giarir' },
   ];
 
   return (
@@ -30,7 +30,15 @@ const VideoLibrary = observer(() => {
           {links.map((link: Video, index) => (
             <div key={index} className={styles.videoCard}>
               <h2 className={styles.title}>{link.title}</h2>
-              <div className={`wistia_embed wistia_async_${link.url} ${styles.video}`}>&nbsp;</div>
+              <div className={styles.video}>
+                <iframe allow="fullscreen"
+                        title={`${index}`}
+                        allowFullScreen
+                        height="100%"
+                        src={`https://streamable.com/e/${link.url}?loop=0`}
+                        width="100%">
+                </iframe>
+              </div>
             </div>
           ))}
         </div>
