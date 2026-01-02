@@ -134,14 +134,15 @@ const Header = observer(() => {
             onKeyPress={e => handleOnEnter(e, scrollToSection)}>
             Advisory Platform
           </Link>
-          <Link
+          {/* Video Library link hidden from navigation */}
+          {/* <Link
             to="/video-library"
             tabIndex={appStore.state.drawerPanelVisible ? 0 : 1}
             className={styles.drawerItem}
             onClick={scrollToSection}
             onKeyPress={e => handleOnEnter(e, scrollToSection)}>
             Video Library
-          </Link>
+          </Link> */}
           {/* <a href={"http://blog.jbafinancialadvisors.com/"} target={"_blank"} className={styles.drawerItem} onClick={scrollToSection} onKeyPress={e => handleOnEnter(e, scrollToSection)}> */}
           {/*  Blog */}
           {/* </a> */}
