@@ -1,6 +1,6 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import StoresProvider from './providers/StoresProvider';
 import { AppStore } from './stores/AppStore';
 
@@ -9,7 +9,7 @@ import Header from './components/header/Header';
 import Home from './pages/home/Home';
 import Platform from './pages/platform/Platform';
 import TermsConditions from './pages/termsconditions/TermsConditions';
-import VideoLibrary from './pages/videolibrary/VideoLibrary';
+// import VideoLibrary from './pages/videolibrary/VideoLibrary';
 
 const App = observer(() => {
   return (
@@ -21,7 +21,7 @@ const App = observer(() => {
             <Route path="/" element={<Home />} />
             <Route path="/platform" element={<Platform />} />
             <Route path="/terms-and-conditions" element={<TermsConditions />} />
-            <Route path="/video-library" element={<VideoLibrary />} />
+            <Route path="/video-library" element={<Navigate to="/" replace />} />
           </Routes>
           <Footer />
         </div>
